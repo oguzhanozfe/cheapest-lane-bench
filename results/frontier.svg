@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 604" font-family="system-ui, sans-serif" font-size="11">
+<rect width="980" height="604" fill="#ffffff"/>
+<g transform="translate(20,20)">
+<text x="42" y="12" font-weight="600" font-size="13">extract</text>
+<line x1="42" y1="200" x2="290" y2="200" stroke="#888"/><line x1="42" y1="20" x2="42" y2="200" stroke="#888"/>
+<text x="36" y="204" text-anchor="end" fill="#555">0.0</text><line x1="42" y1="200" x2="290" y2="200" stroke="#eee"/>
+<text x="36" y="114.0" text-anchor="end" fill="#555">0.5</text><line x1="42" y1="110.0" x2="290" y2="110.0" stroke="#eee"/>
+<text x="36" y="24" text-anchor="end" fill="#555">1.0</text><line x1="42" y1="20" x2="290" y2="20" stroke="#eee"/>
+<text x="42.0" y="214" text-anchor="middle" fill="#555">≤$0.0001</text>
+<text x="161.0197261299508" y="214" text-anchor="middle" fill="#555">$0.0100</text>
+<text x="280.0394522599016" y="214" text-anchor="middle" fill="#555">$1.00</text>
+<polyline points="42.0,65.0 197.2,25.1 256.8,20.0" fill="none" stroke="#bbb" stroke-dasharray="4 3"/>
+<circle cx="197.2" cy="25.1" r="5" fill="#2a6fdb" stroke="#000" stroke-width="2"><title>qwen3.5-9b-local: quality 0.97, $0.0406 per 1k</title></circle>
+<circle cx="42.0" cy="65.0" r="5" fill="#d9480f"><title>nemotron-3.5-lightning-free: quality 0.75, $0 per 1k</title></circle>
+<circle cx="256.8" cy="20.0" r="5" fill="#2b8a3e"><title>gemini-3.5-flash-lite: quality 1.00, $0.4073 per 1k</title></circle>
+<circle cx="268.7" cy="80.0" r="5" fill="#ae3ec9"><title>gemini-3.8-flash: quality 0.67, $0.6454 per 1k</title></circle>
+</g>
+<g transform="translate(340,20)">
+<text x="42" y="12" font-weight="600" font-size="13">triage-log</text>
+<line x1="42" y1="200" x2="290" y2="200" stroke="#888"/><line x1="42" y1="20" x2="42" y2="200" stroke="#888"/>
+<text x="36" y="204" text-anchor="end" fill="#555">0.0</text><line x1="42" y1="200" x2="290" y2="200" stroke="#eee"/>
+<text x="36" y="114.0" text-anchor="end" fill="#555">0.5</text><line x1="42" y1="110.0" x2="290" y2="110.0" stroke="#eee"/>
+<text x="36" y="24" text-anchor="end" fill="#555">1.0</text><line x1="42" y1="20" x2="290" y2="20" stroke="#eee"/>
+<text x="42.0" y="214" text-anchor="middle" fill="#555">≤$0.0001</text>
+<text x="161.0197261299508" y="214" text-anchor="middle" fill="#555">$0.0100</text>
+<text x="280.0394522599016" y="214" text-anchor="middle" fill="#555">$1.00</text>
+<polyline points="42.0,125.0 201.9,62.5 269.0,35.0" fill="none" stroke="#bbb" stroke-dasharray="4 3"/>
+<circle cx="201.9" cy="62.5" r="5" fill="#2a6fdb"><title>qwen3.5-9b-local: quality 0.76, $0.0486 per 1k</title></circle>
+<circle cx="42.0" cy="125.0" r="5" fill="#d9480f"><title>nemotron-3.5-lightning-free: quality 0.42, $0 per 1k</title></circle>
+<circle cx="269.0" cy="35.0" r="5" fill="#2b8a3e" stroke="#000" stroke-width="2"><title>gemini-3.5-flash-lite: quality 0.92, $0.6527 per 1k</title></circle>
+</g>
+<g transform="translate(660,20)">
+<text x="42" y="12" font-weight="600" font-size="13">diff-review</text>
+<line x1="42" y1="200" x2="290" y2="200" stroke="#888"/><line x1="42" y1="20" x2="42" y2="200" stroke="#888"/>
+<text x="36" y="204" text-anchor="end" fill="#555">0.0</text><line x1="42" y1="200" x2="290" y2="200" stroke="#eee"/>
+<text x="36" y="114.0" text-anchor="end" fill="#555">0.5</text><line x1="42" y1="110.0" x2="290" y2="110.0" stroke="#eee"/>
+<text x="36" y="24" text-anchor="end" fill="#555">1.0</text><line x1="42" y1="20" x2="290" y2="20" stroke="#eee"/>
+<text x="42.0" y="214" text-anchor="middle" fill="#555">≤$0.0001</text>
+<text x="161.0197261299508" y="214" text-anchor="middle" fill="#555">$0.0100</text>
+<text x="280.0394522599016" y="214" text-anchor="middle" fill="#555">$1.00</text>
+<polyline points="42.0,95.0 217.7,85.0 256.7,25.0" fill="none" stroke="#bbb" stroke-dasharray="4 3"/>
+<circle cx="217.7" cy="85.0" r="5" fill="#2a6fdb"><title>qwen3.5-9b-local: quality 0.64, $0.0895 per 1k</title></circle>
+<circle cx="42.0" cy="95.0" r="5" fill="#d9480f"><title>nemotron-3.5-lightning-free: quality 0.58, $0 per 1k</title></circle>
+<circle cx="256.7" cy="25.0" r="5" fill="#2b8a3e" stroke="#000" stroke-width="2"><title>gemini-3.5-flash-lite: quality 0.97, $0.4051 per 1k</title></circle>
+</g>
+<g transform="translate(20,280)">
+<text x="42" y="12" font-weight="600" font-size="13">summarize</text>
+<line x1="42" y1="200" x2="290" y2="200" stroke="#888"/><line x1="42" y1="20" x2="42" y2="200" stroke="#888"/>
+<text x="36" y="204" text-anchor="end" fill="#555">0.0</text><line x1="42" y1="200" x2="290" y2="200" stroke="#eee"/>
+<text x="36" y="114.0" text-anchor="end" fill="#555">0.5</text><line x1="42" y1="110.0" x2="290" y2="110.0" stroke="#eee"/>
+<text x="36" y="24" text-anchor="end" fill="#555">1.0</text><line x1="42" y1="20" x2="290" y2="20" stroke="#eee"/>
+<text x="42.0" y="214" text-anchor="middle" fill="#555">≤$0.0001</text>
+<text x="161.0197261299508" y="214" text-anchor="middle" fill="#555">$0.0100</text>
+<text x="280.0394522599016" y="214" text-anchor="middle" fill="#555">$1.00</text>
+<polyline points="196.3,53.6 264.6,48.8" fill="none" stroke="#bbb" stroke-dasharray="4 3"/>
+<circle cx="196.3" cy="53.6" r="5" fill="#2a6fdb" stroke="#000" stroke-width="2"><title>qwen3.5-9b-local: quality 0.81, $0.0391 per 1k</title></circle>
+<circle cx="42.0" cy="118.4" r="5" fill="#d9480f"><title>nemotron-3.5-lightning-free: quality 0.45, $0 per 1k</title></circle>
+<circle cx="264.6" cy="48.8" r="5" fill="#2b8a3e"><title>gemini-3.5-flash-lite: quality 0.84, $0.5492 per 1k</title></circle>
+</g>
+<g transform="translate(340,280)">
+<text x="42" y="12" font-weight="600" font-size="13">commit-message</text>
+<line x1="42" y1="200" x2="290" y2="200" stroke="#888"/><line x1="42" y1="20" x2="42" y2="200" stroke="#888"/>
+<text x="36" y="204" text-anchor="end" fill="#555">0.0</text><line x1="42" y1="200" x2="290" y2="200" stroke="#eee"/>
+<text x="36" y="114.0" text-anchor="end" fill="#555">0.5</text><line x1="42" y1="110.0" x2="290" y2="110.0" stroke="#eee"/>
+<text x="36" y="24" text-anchor="end" fill="#555">1.0</text><line x1="42" y1="20" x2="290" y2="20" stroke="#eee"/>
+<text x="42.0" y="214" text-anchor="middle" fill="#555">≤$0.0001</text>
+<text x="161.0197261299508" y="214" text-anchor="middle" fill="#555">$0.0100</text>
+<text x="280.0394522599016" y="214" text-anchor="middle" fill="#555">$1.00</text>
+<polyline points="183.3,35.0 249.2,22.5" fill="none" stroke="#bbb" stroke-dasharray="4 3"/>
+<circle cx="183.3" cy="35.0" r="5" fill="#2a6fdb"><title>qwen3.5-9b-local: quality 0.92, $0.0237 per 1k</title></circle>
+<circle cx="249.2" cy="22.5" r="5" fill="#2b8a3e" stroke="#000" stroke-width="2"><title>gemini-3.5-flash-lite: quality 0.99, $0.3030 per 1k</title></circle>
+</g>
+<g transform="translate(660,280)">
+<text x="42" y="12" font-weight="600" font-size="13">translate</text>
+<line x1="42" y1="200" x2="290" y2="200" stroke="#888"/><line x1="42" y1="20" x2="42" y2="200" stroke="#888"/>
+<text x="36" y="204" text-anchor="end" fill="#555">0.0</text><line x1="42" y1="200" x2="290" y2="200" stroke="#eee"/>
+<text x="36" y="114.0" text-anchor="end" fill="#555">0.5</text><line x1="42" y1="110.0" x2="290" y2="110.0" stroke="#eee"/>
+<text x="36" y="24" text-anchor="end" fill="#555">1.0</text><line x1="42" y1="20" x2="290" y2="20" stroke="#eee"/>
+<text x="42.0" y="214" text-anchor="middle" fill="#555">≤$0.0001</text>
+<text x="161.0197261299508" y="214" text-anchor="middle" fill="#555">$0.0100</text>
+<text x="280.0394522599016" y="214" text-anchor="middle" fill="#555">$1.00</text>
+<circle cx="197.4" cy="38.2" r="5" fill="#2a6fdb"><title>qwen3.5-9b-local: quality 0.90, $0.0408 per 1k</title></circle>
+<circle cx="272.1" cy="31.7" r="5" fill="#2b8a3e" stroke="#000" stroke-width="2"><title>gemini-3.5-flash-lite: quality 0.93, $0.7346 per 1k</title></circle>
+</g>
+<text x="20" y="540" fill="#333">x: est. USD per 1,000 items (log; local = electricity, free tiers at paid list price). y: quality 0-1. Black ring: recommended lane. Dashed: frontier.</text>
+<circle cx="25" cy="556" r="5" fill="#2a6fdb"/><text x="35" y="560">qwen3.5-9b-local</text>
+<circle cx="345" cy="556" r="5" fill="#d9480f"/><text x="355" y="560">nemotron-3.5-lightning-free</text>
+<circle cx="665" cy="556" r="5" fill="#2b8a3e"/><text x="675" y="560">gemini-3.5-flash-lite</text>
+<circle cx="25" cy="576" r="5" fill="#ae3ec9"/><text x="35" y="580">gemini-3.8-flash</text>
+</svg>
