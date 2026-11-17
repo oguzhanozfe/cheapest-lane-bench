@@ -24,17 +24,21 @@ from .offload import backends
 # under sustained generation sits roughly in this range; change it for your box.
 LOCAL_WATTS = 40.0
 USD_PER_KWH = 0.30
+GROQ = "https://api.groq.com/openai/v1"
 
 
 @dataclass(frozen=True)
 class Lane:
     name: str
-    kind: str  # ollama | gemini | gemini-openai | opencode | deepseek
+    kind: str  # ollama | gemini | openai | opencode | deepseek
     model: str
     usd_in_per_m: float = 0.0
     usd_out_per_m: float = 0.0
     price_note: str = ""
     thinking: str = "minimal"  # Gemini thinkingLevel: the cheapest the model accepts
+    base_url: str = ""         # openai kind: OpenAI-compatible endpoint
+    key_env: str = ""          # openai kind: env var holding the key (never stored)
+    extra: tuple = ()          # openai kind: extra request fields as (name, value) pairs
 
     def cost(self, prompt_tokens: int, output_tokens: int, seconds: float) -> float:
         usd = prompt_tokens * self.usd_in_per_m / 1e6 + output_tokens * self.usd_out_per_m / 1e6
@@ -57,6 +61,14 @@ LANES: dict[str, Lane] = {lane.name: lane for lane in (
          "Gemini paid-tier list price; run on the free tier"),
     Lane("gemini-3.8-flash", "gemini", "gemini-3.8-flash", 0.75, 3.75,
          "Gemini paid-tier list price through 2026-12-31; run on the free tier", "low"),
+    # Groq developer-tier list prices from console.groq.com/docs/models on 2026-11-17; run on the
+    # free tier. Reasoning is set to its cheapest setting, like the other lanes.
+    Lane("groq-gpt-oss-20b", "openai", "openai/gpt-oss-20b", 0.075, 0.30,
+         "Groq list price; run on the free tier", base_url=GROQ, key_env="GROQ_API_KEY",
+         extra=(("reasoning_effort", "low"),)),
+    Lane("groq-qwen3.8-27b", "openai", "qwen/qwen3.8-27b", 0.80, 4.00,
+         "Groq list price; run on the free tier", base_url=GROQ, key_env="GROQ_API_KEY",
+         extra=(("reasoning_effort", "none"),)),
     Lane("deepseek-flash", "deepseek", "deepseek-flash", 0.30, 1.20, "DeepSeek peak list price"),
 )}
 
@@ -67,15 +79,21 @@ class LaneError(RuntimeError):
 
 def _post(url: str, payload: dict, headers: dict, timeout: float) -> dict:
     request = urllib.request.Request(url, data=json.dumps(payload).encode(), method="POST",
-                                     headers={"Content-Type": "application/json", **headers})
+                                     headers={"Content-Type": "application/json",
+                                              "User-Agent": "cheapest-lane-bench/1.0", **headers})
     delay = 10.0
     for attempt in range(4):
         try:
+            sent = time.monotonic()
             with urllib.request.urlopen(request, timeout=timeout) as response:
-                return json.loads(response.read().decode("utf-8"))
+                data = json.loads(response.read().decode("utf-8"))
+            # Latency of the request that succeeded, without earlier retries and backoff.
+            data["_request_seconds"] = round(time.monotonic() - sent, 3)
+            data["_attempts"] = attempt + 1
+            return data
         except urllib.error.HTTPError as error:
             body = error.read()[:300].decode("utf-8", "replace")
-            if error.code == 429 and "quota" in body.lower():
+            if error.code == 429 and any(k in body.lower() for k in ("quota", "per day", "(rpd)", "(tpd)")):
                 raise LaneError(f"HTTP 429 quota: {body}") from error  # daily quota: retrying cannot help
             if error.code in (429, 500, 502, 503, 504) and attempt < 3:
                 time.sleep(delay)
@@ -138,24 +156,27 @@ def generate(lane: Lane, messages: list[dict], *, schema: dict | None, num_ctx: 
             raise LaneError(f"empty answer, finishReason={candidate.get('finishReason')}")
         return {"content": content, "prompt_tokens": usage.get("promptTokenCount", 0),
                 "output_tokens": usage.get("candidatesTokenCount", 0) + usage.get("thoughtsTokenCount", 0),
-                "seconds": round(time.monotonic() - started, 3)}
+                "seconds": data["_request_seconds"], "attempts": data["_attempts"], "wall_seconds": round(time.monotonic() - started, 3)}
 
-    if lane.kind == "gemini-openai":  # Gemini API's OpenAI-compatible endpoint; Gemma works here
-        key = os.environ.get("GEMINI_API_KEY")
-        if not key:
-            raise LaneError("GEMINI_API_KEY is not set")
-        data = _post("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
-                     {"model": lane.model, "temperature": 0, "max_tokens": num_predict * 2,
-                      "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]},
-                     {"Authorization": f"Bearer {key}"}, timeout)
+    if lane.kind == "openai":  # any OpenAI-compatible endpoint (Groq, Gemini's compat layer)
+        key = os.environ.get(lane.key_env) if lane.key_env else None
+        if lane.key_env and not key:
+            raise LaneError(f"{lane.key_env} is not set")
+        payload = {"model": lane.model, "temperature": 0, "max_tokens": num_predict * 2,
+                   "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
+                   **dict(lane.extra)}
+        if schema:
+            payload["response_format"] = {"type": "json_object"}
+        data = _post(lane.base_url + "/chat/completions", payload,
+                     {"Authorization": f"Bearer {key}"} if key else {}, timeout)
         usage = data.get("usage") or {}
-        content = re.sub(r"<thought>.*?</thought>", "", data["choices"][0]["message"].get("content") or "",
-                         flags=re.S).strip()
+        message = data["choices"][0]["message"]
+        content = re.sub(r"<thought>.*?</thought>", "", message.get("content") or "", flags=re.S).strip()
         if not content:
-            raise LaneError("empty answer")
+            raise LaneError(f"empty answer, finish_reason={data['choices'][0].get('finish_reason')}")
         return {"content": content, "prompt_tokens": usage.get("prompt_tokens", 0),
-                "output_tokens": usage.get("completion_tokens", 0),
-                "seconds": round(time.monotonic() - started, 3)}
+                "output_tokens": usage.get("completion_tokens", 0),  # includes reasoning tokens
+                "seconds": data["_request_seconds"], "attempts": data["_attempts"], "wall_seconds": round(time.monotonic() - started, 3)}
 
     if lane.kind == "deepseek":
         key = os.environ.get("DEEPSEEK_API_KEY")
@@ -172,7 +193,7 @@ def generate(lane: Lane, messages: list[dict], *, schema: dict | None, num_ctx: 
         return {"content": data["choices"][0]["message"]["content"],
                 "prompt_tokens": usage.get("prompt_tokens", 0),
                 "output_tokens": usage.get("completion_tokens", 0),
-                "seconds": round(time.monotonic() - started, 3)}
+                "seconds": data["_request_seconds"], "attempts": data["_attempts"], "wall_seconds": round(time.monotonic() - started, 3)}
 
     if lane.kind == "opencode":
         prompt = f"[SYSTEM]\n{system}\n\n[USER]\n{user}\n\n[INSTRUCTIONS]\nAnswer as the assistant. " \

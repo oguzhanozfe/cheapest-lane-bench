@@ -123,6 +123,250 @@
    }
   ],
   "commit-message|gemini-3.8-flash": [],
+  "commit-message|groq-gpt-oss-20b": [
+   {
+    "det": 0.6667,
+    "id": "commit-message-01",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.7084
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-02",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.6667,
+    "id": "commit-message-03",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.7084
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-04",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-05",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 0.6667,
+    "id": "commit-message-06",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.7084
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-07",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.3333,
+    "id": "commit-message-08",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.4166
+   },
+   {
+    "det": 0.6667,
+    "id": "commit-message-09",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.5834
+   },
+   {
+    "det": 0.6667,
+    "id": "commit-message-10",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.7084
+   },
+   {
+    "det": 0.6667,
+    "id": "commit-message-11",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.5834
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-12",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   }
+  ],
+  "commit-message|groq-qwen3.8-27b": [
+   {
+    "det": 1.0,
+    "id": "commit-message-01",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-02",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-03",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-04",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-05",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-06",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-07",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-08",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-09",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-10",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-11",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-12",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   }
+  ],
   "commit-message|nemotron-3.5-lightning-free": [],
   "commit-message|qwen3.5-4b-local": [
    {
@@ -500,6 +744,250 @@
     },
     "ok": true,
     "quality": 1.0
+   }
+  ],
+  "diff-review|groq-gpt-oss-20b": [
+   {
+    "det": 1.0,
+    "id": "diff-review-01",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-02",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-03",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.0,
+    "id": "diff-review-04",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-05",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.0,
+    "id": "diff-review-06",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-07",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-08",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-09",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-10",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.6667,
+    "id": "diff-review-11",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.6667
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-12",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   }
+  ],
+  "diff-review|groq-qwen3.8-27b": [
+   {
+    "det": 1.0,
+    "id": "diff-review-01",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-02",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-03",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.6667,
+    "id": "diff-review-04",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.6667
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-05",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-06",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-07",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-08",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-09",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-10",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-11",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.6667,
+    "id": "diff-review-12",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.6667
    }
   ],
   "diff-review|nemotron-3.5-lightning-free": [
@@ -1022,6 +1510,250 @@
     "quality": 1.0
    }
   ],
+  "extract|groq-gpt-oss-20b": [
+   {
+    "det": 0.8889,
+    "id": "extract-01",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8889
+   },
+   {
+    "det": 1.0,
+    "id": "extract-02",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-03",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-04",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-05",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-06",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-07",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-08",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-09",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-10",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.8571,
+    "id": "extract-11",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8571
+   },
+   {
+    "det": 1.0,
+    "id": "extract-12",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   }
+  ],
+  "extract|groq-qwen3.8-27b": [
+   {
+    "det": 1.0,
+    "id": "extract-01",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-02",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-03",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-04",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-05",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-06",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-07",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-08",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-09",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-10",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-11",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-12",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   }
+  ],
   "extract|nemotron-3.5-lightning-free": [
    {
     "det": 1.0,
@@ -1532,6 +2264,250 @@
     "quality": 0.68
    }
   ],
+  "summarize|groq-gpt-oss-20b": [
+   {
+    "det": 0.68,
+    "id": "summarize-01",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.715
+   },
+   {
+    "det": 0.52,
+    "id": "summarize-02",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.635
+   },
+   {
+    "det": 0.52,
+    "id": "summarize-03",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.635
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-04",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.67
+   },
+   {
+    "det": 0.52,
+    "id": "summarize-05",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.635
+   },
+   {
+    "det": 0.36,
+    "id": "summarize-06",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.43
+   },
+   {
+    "det": 0.68,
+    "id": "summarize-07",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.59
+   },
+   {
+    "det": 0.68,
+    "id": "summarize-08",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.715
+   },
+   {
+    "det": 0.2,
+    "id": "summarize-09",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.475
+   },
+   {
+    "det": 0.52,
+    "id": "summarize-10",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.635
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-11",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.67
+   },
+   {
+    "det": 0.36,
+    "id": "summarize-12",
+    "judges": {
+     "primary": 2,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.305
+   }
+  ],
+  "summarize|groq-qwen3.8-27b": [
+   {
+    "det": 0.68,
+    "id": "summarize-01",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.715
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-02",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.795
+   },
+   {
+    "det": 0.52,
+    "id": "summarize-03",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.635
+   },
+   {
+    "det": 1.0,
+    "id": "summarize-04",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 0.68,
+    "id": "summarize-05",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.84
+   },
+   {
+    "det": 1.0,
+    "id": "summarize-06",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "summarize-07",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-08",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.795
+   },
+   {
+    "det": 1.0,
+    "id": "summarize-09",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-10",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.92
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-11",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.67
+   },
+   {
+    "det": 0.36,
+    "id": "summarize-12",
+    "judges": {
+     "primary": 2,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.305
+   }
+  ],
   "summarize|nemotron-3.5-lightning-free": [
    {
     "det": 0.84,
@@ -1932,6 +2908,250 @@
     "quality": 0.9323
    }
   ],
+  "translate|groq-gpt-oss-20b": [
+   {
+    "det": 0.9569,
+    "id": "translate-01",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9785
+   },
+   {
+    "det": 0.7703,
+    "id": "translate-02",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8851
+   },
+   {
+    "det": 0.8447,
+    "id": "translate-03",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9224
+   },
+   {
+    "det": 0.9212,
+    "id": "translate-04",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8356
+   },
+   {
+    "det": 0.9136,
+    "id": "translate-05",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.7068
+   },
+   {
+    "det": 0.9283,
+    "id": "translate-06",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9642
+   },
+   {
+    "det": 0.8994,
+    "id": "translate-07",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.6997
+   },
+   {
+    "det": 0.824,
+    "id": "translate-08",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.662
+   },
+   {
+    "det": 0.9298,
+    "id": "translate-09",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9649
+   },
+   {
+    "det": 0.6326,
+    "id": "translate-10",
+    "judges": {
+     "primary": 1,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.3163
+   },
+   {
+    "det": 0.9162,
+    "id": "translate-11",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8331
+   },
+   {
+    "det": 0.8014,
+    "id": "translate-12",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.7757
+   }
+  ],
+  "translate|groq-qwen3.8-27b": [
+   {
+    "det": 0.9632,
+    "id": "translate-01",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9816
+   },
+   {
+    "det": 0.9373,
+    "id": "translate-02",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9687
+   },
+   {
+    "det": 0.9436,
+    "id": "translate-03",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8468
+   },
+   {
+    "det": 0.9128,
+    "id": "translate-04",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8314
+   },
+   {
+    "det": 0.8481,
+    "id": "translate-05",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.7991
+   },
+   {
+    "det": 0.8529,
+    "id": "translate-06",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8014
+   },
+   {
+    "det": 0.935,
+    "id": "translate-07",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8425
+   },
+   {
+    "det": 0.9321,
+    "id": "translate-08",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9661
+   },
+   {
+    "det": 0.9448,
+    "id": "translate-09",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9724
+   },
+   {
+    "det": 0.8921,
+    "id": "translate-10",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.6961
+   },
+   {
+    "det": 0.9153,
+    "id": "translate-11",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8327
+   },
+   {
+    "det": 0.9267,
+    "id": "translate-12",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9633
+   }
+  ],
   "translate|nemotron-3.5-lightning-free": [],
   "translate|qwen3.5-4b-local": [
    {
@@ -2323,6 +3543,250 @@
    {
     "det": 1.0,
     "id": "triage-03",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   }
+  ],
+  "triage-log|groq-gpt-oss-20b": [
+   {
+    "det": 1.0,
+    "id": "triage-01",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.0,
+    "id": "triage-02",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-03",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-04",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.0,
+    "id": "triage-05",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.0
+   },
+   {
+    "det": 0.6667,
+    "id": "triage-06",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.6667
+   },
+   {
+    "det": 1.0,
+    "id": "triage-07",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-08",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.0,
+    "id": "triage-09",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-10",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.0,
+    "id": "triage-11",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-12",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   }
+  ],
+  "triage-log|groq-qwen3.8-27b": [
+   {
+    "det": 1.0,
+    "id": "triage-01",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-02",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-03",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-04",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.6667,
+    "id": "triage-05",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.6667
+   },
+   {
+    "det": 1.0,
+    "id": "triage-06",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-07",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-08",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.0,
+    "id": "triage-09",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-10",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-11",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-12",
     "judges": {
      "primary": null,
      "second": null
@@ -2725,6 +4189,20 @@
    "usd_in_per_m": 0.75,
    "usd_out_per_m": 3.75
   },
+  "groq-gpt-oss-20b": {
+   "kind": "openai",
+   "model": "openai/gpt-oss-20b",
+   "price_note": "Groq list price; run on the free tier",
+   "usd_in_per_m": 0.075,
+   "usd_out_per_m": 0.3
+  },
+  "groq-qwen3.8-27b": {
+   "kind": "openai",
+   "model": "qwen/qwen3.8-27b",
+   "price_note": "Groq list price; run on the free tier",
+   "usd_in_per_m": 0.8,
+   "usd_out_per_m": 4.0
+  },
   "nemotron-3.5-lightning-free": {
    "kind": "opencode",
    "model": "opencode/nemotron-3.5-lightning-free",
@@ -2809,20 +4287,61 @@
      ],
      "task": "commit-message",
      "usd_per_1k_items": 0.303
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.7778,
+     "items": 12,
+     "judge_mean": 4.0,
+     "judged": true,
+     "lane": "groq-gpt-oss-20b",
+     "mean_output_tokens": 92,
+     "mean_prompt_tokens": 530,
+     "ok": 12,
+     "p50_seconds": 0.52,
+     "quality": 0.7639,
+     "quality_ci95": [
+      0.6633,
+      0.8681
+     ],
+     "task": "commit-message",
+     "usd_per_1k_items": 0.0673
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 1.0,
+     "items": 12,
+     "judge_mean": 4.833,
+     "judged": true,
+     "lane": "groq-qwen3.8-27b",
+     "mean_output_tokens": 62,
+     "mean_prompt_tokens": 507,
+     "ok": 12,
+     "p50_seconds": 0.45,
+     "quality": 0.9792,
+     "quality_ci95": [
+      0.9479,
+      1.0
+     ],
+     "task": "commit-message",
+     "usd_per_1k_items": 0.6549
     }
    ],
    "frontier": [
     "qwen3.5-4b-local",
     "qwen3.5-9b-local",
-    "gemini-3.5-flash-lite"
+    "gemini-3.5-flash-lite",
+    "groq-qwen3.8-27b"
    ],
    "recommendation": {
-    "bar": 0.8701,
-    "best_lane": "gemini-3.5-flash-lite",
-    "best_quality": 0.9201,
-    "lane": "gemini-3.5-flash-lite",
-    "quality": 0.9201,
-    "usd_per_1k_items": 0.303
+    "bar": 0.9292,
+    "best_lane": "groq-qwen3.8-27b",
+    "best_quality": 0.9792,
+    "lane": "groq-qwen3.8-27b",
+    "quality": 0.9792,
+    "usd_per_1k_items": 0.6549
    }
   },
   "diff-review": {
@@ -2926,18 +4445,61 @@
      ],
      "same_items": {
       "gemini-3.5-flash-lite": 1.0,
+      "groq-gpt-oss-20b": 1.0,
+      "groq-qwen3.8-27b": 1.0,
       "nemotron-3.5-lightning-free": 0.0,
       "qwen3.5-4b-local": 0.2667,
       "qwen3.5-9b-local": 1.0
      },
      "task": "diff-review",
      "usd_per_1k_items": 0.6817
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.8056,
+     "items": 12,
+     "judge_mean": null,
+     "judged": true,
+     "lane": "groq-gpt-oss-20b",
+     "mean_output_tokens": 148,
+     "mean_prompt_tokens": 670,
+     "ok": 12,
+     "p50_seconds": 0.66,
+     "quality": 0.8056,
+     "quality_ci95": [
+      0.5833,
+      1.0
+     ],
+     "task": "diff-review",
+     "usd_per_1k_items": 0.0947
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.9444,
+     "items": 12,
+     "judge_mean": null,
+     "judged": true,
+     "lane": "groq-qwen3.8-27b",
+     "mean_output_tokens": 102,
+     "mean_prompt_tokens": 606,
+     "ok": 12,
+     "p50_seconds": 0.69,
+     "quality": 0.9444,
+     "quality_ci95": [
+      0.8611,
+      1.0
+     ],
+     "task": "diff-review",
+     "usd_per_1k_items": 0.8928
     }
    ],
    "frontier": [
     "qwen3.5-9b-local",
     "nemotron-3.5-lightning-free",
-    "gemini-3.5-flash-lite"
+    "gemini-3.5-flash-lite",
+    "groq-gpt-oss-20b"
    ],
    "recommendation": {
     "bar": 0.9222,
@@ -3049,19 +4611,62 @@
      ],
      "same_items": {
       "gemini-3.5-flash-lite": 1.0,
+      "groq-gpt-oss-20b": 0.963,
+      "groq-qwen3.8-27b": 1.0,
       "nemotron-3.5-lightning-free": 0.6667,
       "qwen3.5-4b-local": 0.8413,
       "qwen3.5-9b-local": 0.9333
      },
      "task": "extract",
      "usd_per_1k_items": 0.7955
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.9788,
+     "items": 12,
+     "judge_mean": null,
+     "judged": true,
+     "lane": "groq-gpt-oss-20b",
+     "mean_output_tokens": 156,
+     "mean_prompt_tokens": 414,
+     "ok": 12,
+     "p50_seconds": 0.48,
+     "quality": 0.9788,
+     "quality_ci95": [
+      0.9484,
+      1.0
+     ],
+     "task": "extract",
+     "usd_per_1k_items": 0.0778
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 1.0,
+     "items": 12,
+     "judge_mean": null,
+     "judged": true,
+     "lane": "groq-qwen3.8-27b",
+     "mean_output_tokens": 157,
+     "mean_prompt_tokens": 356,
+     "ok": 12,
+     "p50_seconds": 0.75,
+     "quality": 1.0,
+     "quality_ci95": [
+      1.0,
+      1.0
+     ],
+     "task": "extract",
+     "usd_per_1k_items": 0.9111
     }
    ],
    "frontier": [
     "qwen3.5-4b-local",
     "qwen3.5-9b-local",
     "nemotron-3.5-lightning-free",
-    "gemini-3.5-flash-lite"
+    "gemini-3.5-flash-lite",
+    "groq-gpt-oss-20b"
    ],
    "recommendation": {
     "bar": 0.95,
@@ -3133,6 +4738,8 @@
      ],
      "same_items": {
       "gemini-3.5-flash-lite": 0.63,
+      "groq-gpt-oss-20b": 0.675,
+      "groq-qwen3.8-27b": 0.755,
       "qwen3.5-4b-local": 0.6925,
       "qwen3.5-9b-local": 0.63
      },
@@ -3178,20 +4785,63 @@
      ],
      "same_items": {
       "gemini-3.5-flash-lite": 0.63,
+      "groq-gpt-oss-20b": 0.675,
+      "groq-qwen3.8-27b": 0.755,
       "qwen3.5-4b-local": 0.6925,
       "qwen3.5-9b-local": 0.63
      },
      "task": "summarize",
      "usd_per_1k_items": 1.2113
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.56,
+     "items": 12,
+     "judge_mean": 3.5,
+     "judged": true,
+     "lane": "groq-gpt-oss-20b",
+     "mean_output_tokens": 192,
+     "mean_prompt_tokens": 544,
+     "ok": 12,
+     "p50_seconds": 0.67,
+     "quality": 0.5925,
+     "quality_ci95": [
+      0.5183,
+      0.6562
+     ],
+     "task": "summarize",
+     "usd_per_1k_items": 0.0984
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.8,
+     "items": 12,
+     "judge_mean": 4.0,
+     "judged": true,
+     "lane": "groq-qwen3.8-27b",
+     "mean_output_tokens": 191,
+     "mean_prompt_tokens": 516,
+     "ok": 12,
+     "p50_seconds": 0.73,
+     "quality": 0.775,
+     "quality_ci95": [
+      0.6688,
+      0.8604
+     ],
+     "task": "summarize",
+     "usd_per_1k_items": 1.1755
     }
    ],
    "frontier": [
-    "qwen3.5-4b-local"
+    "qwen3.5-4b-local",
+    "groq-qwen3.8-27b"
    ],
    "recommendation": {
-    "bar": 0.675,
-    "best_lane": "qwen3.5-4b-local",
-    "best_quality": 0.725,
+    "bar": 0.725,
+    "best_lane": "groq-qwen3.8-27b",
+    "best_quality": 0.775,
     "lane": "qwen3.5-4b-local",
     "quality": 0.725,
     "usd_per_1k_items": 0.0107
@@ -3278,11 +4928,53 @@
      ],
      "same_items": {
       "gemini-3.5-flash-lite": 0.8463,
+      "groq-gpt-oss-20b": 0.9224,
+      "groq-qwen3.8-27b": 0.8468,
       "qwen3.5-4b-local": 0.9604,
       "qwen3.5-9b-local": 0.96
      },
      "task": "translate",
      "usd_per_1k_items": 0.9728
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.8615,
+     "items": 12,
+     "judge_mean": 3.917,
+     "judged": true,
+     "lane": "groq-gpt-oss-20b",
+     "mean_output_tokens": 244,
+     "mean_prompt_tokens": 403,
+     "ok": 12,
+     "p50_seconds": 0.72,
+     "quality": 0.7954,
+     "quality_ci95": [
+      0.6879,
+      0.8882
+     ],
+     "task": "translate",
+     "usd_per_1k_items": 0.1036
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.917,
+     "items": 12,
+     "judge_mean": 4.333,
+     "judged": true,
+     "lane": "groq-qwen3.8-27b",
+     "mean_output_tokens": 256,
+     "mean_prompt_tokens": 367,
+     "ok": 12,
+     "p50_seconds": 1.01,
+     "quality": 0.8752,
+     "quality_ci95": [
+      0.826,
+      0.923
+     ],
+     "task": "translate",
+     "usd_per_1k_items": 1.3174
     }
    ],
    "frontier": [
@@ -3400,12 +5092,54 @@
      ],
      "same_items": {
       "gemini-3.5-flash-lite": 1.0,
+      "groq-gpt-oss-20b": 0.6667,
+      "groq-qwen3.8-27b": 1.0,
       "nemotron-3.5-lightning-free": 0.6667,
       "qwen3.5-4b-local": 1.0,
       "qwen3.5-9b-local": 0.5
      },
      "task": "triage-log",
      "usd_per_1k_items": 1.4835
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.6389,
+     "items": 12,
+     "judge_mean": null,
+     "judged": true,
+     "lane": "groq-gpt-oss-20b",
+     "mean_output_tokens": 204,
+     "mean_prompt_tokens": 588,
+     "ok": 12,
+     "p50_seconds": 0.69,
+     "quality": 0.6389,
+     "quality_ci95": [
+      0.3889,
+      0.8889
+     ],
+     "task": "triage-log",
+     "usd_per_1k_items": 0.1052
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.8889,
+     "items": 12,
+     "judge_mean": null,
+     "judged": true,
+     "lane": "groq-qwen3.8-27b",
+     "mean_output_tokens": 224,
+     "mean_prompt_tokens": 535,
+     "ok": 12,
+     "p50_seconds": 0.85,
+     "quality": 0.8889,
+     "quality_ci95": [
+      0.7222,
+      1.0
+     ],
+     "task": "triage-log",
+     "usd_per_1k_items": 1.3227
     }
    ],
    "frontier": [

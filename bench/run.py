@@ -69,7 +69,8 @@ def run_one(lane: Lane, task_name: str, item: dict, attempts: int, timeout: floa
     raise AssertionError("unreachable")
 
 
-def run_lane(lane: Lane, task_names: list[str], limit: int | None, attempts: int, timeout: float = 300.0) -> None:
+def run_lane(lane: Lane, task_names: list[str], limit: int | None, attempts: int, timeout: float = 300.0,
+             pace: float = 0.0) -> None:
     for task_name in task_names:
         path = run_path(lane.name, task_name)
         done = {r["id"] for r in load_jsonl(path) if r.get("status") == "ok"}
@@ -77,6 +78,7 @@ def run_lane(lane: Lane, task_names: list[str], limit: int | None, attempts: int
             if item["id"] in done:
                 continue
             result = run_one(lane, task_name, item, attempts, timeout)
+            time.sleep(pace)  # stay under per-minute token limits on free tiers
             if result is None:
                 continue
             with _write_lock:
@@ -102,6 +104,7 @@ def main() -> None:
     parser.add_argument("--limit", type=int)
     parser.add_argument("--attempts", type=int, default=3)
     parser.add_argument("--timeout", type=float, default=300.0, help="seconds per model call")
+    parser.add_argument("--pace", type=float, default=0.0, help="seconds to wait between calls on a lane")
     args = parser.parse_args()
     lanes = [LANES[name] for name in args.lanes.split(",")]
     task_names = args.tasks.split(",")
@@ -115,7 +118,7 @@ def main() -> None:
     for lane in lanes:
         groups.setdefault("ollama" if lane.kind == "ollama" else lane.name, []).append(lane)
     with ThreadPoolExecutor(max_workers=len(groups)) as pool:
-        futures = [pool.submit(lambda group=group: [run_lane(lane, task_names, args.limit, args.attempts, args.timeout)
+        futures = [pool.submit(lambda group=group: [run_lane(lane, task_names, args.limit, args.attempts, args.timeout, args.pace)
                                                     for lane in group]) for group in groups.values()]
         for future in futures:
             future.result()

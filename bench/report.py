@@ -225,7 +225,7 @@ def markdown(summary: dict) -> str:
     return "\n".join(out) + "\n"
 
 
-COLORS = ["#2a6fdb", "#e8590c", "#2b8a3e", "#ae3ec9", "#0b7285", "#c2255c", "#5c940d"]
+COLORS = ["#2a6fdb", "#e8590c", "#2b8a3e", "#ae3ec9", "#0b7285", "#c2255c", "#f59f00", "#495057", "#74c0fc"]
 
 
 def svg(summary: dict) -> str:
