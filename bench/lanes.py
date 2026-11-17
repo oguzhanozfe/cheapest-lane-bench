@@ -39,11 +39,14 @@ class Lane:
     base_url: str = ""         # openai kind: OpenAI-compatible endpoint
     key_env: str = ""          # openai kind: env var holding the key (never stored)
     extra: tuple = ()          # openai kind: extra request fields as (name, value) pairs
+    watts: float = 0.0         # local GPU lanes behind an HTTP server: assumed board power
+    json_mode: str = "object"  # openai kind: "object" (JSON mode) or "schema" (grammar-constrained)
 
     def cost(self, prompt_tokens: int, output_tokens: int, seconds: float) -> float:
         usd = prompt_tokens * self.usd_in_per_m / 1e6 + output_tokens * self.usd_out_per_m / 1e6
         if self.kind == "ollama":
             usd += seconds * LOCAL_WATTS / 3.6e6 * USD_PER_KWH
+        usd += seconds * self.watts / 3.6e6 * USD_PER_KWH
         return usd
 
 
@@ -69,6 +72,12 @@ LANES: dict[str, Lane] = {lane.name: lane for lane in (
     Lane("groq-qwen3.8-27b", "openai", "qwen/qwen3.8-27b", 0.80, 4.00,
          "Groq list price; run on the free tier", base_url=GROQ, key_env="GROQ_API_KEY",
          extra=(("reasoning_effort", "none"),)),
+    # A community fine-tune, not the official Qwen release, served by LM Studio on a local
+    # RTX 3090. Set LMSTUDIO_URL to the server's OpenAI-compatible base URL.
+    Lane("rtx3090-qwen3.8-27b-community-ft", "openai", "qwen3.8-27b-uncensored-hauhaucs-aggressive-mtp",
+         price_note="community fine-tune of Qwen3.8-27B, local RTX 3090 via LM Studio; electricity only "
+                    f"at an assumed 350 W x ${USD_PER_KWH}/kWh",
+         base_url=os.environ.get("LMSTUDIO_URL", "http://127.0.0.1:1234/v1"), watts=350.0, json_mode="schema"),
     Lane("deepseek-flash", "deepseek", "deepseek-flash", 0.30, 1.20, "DeepSeek peak list price"),
 )}
 
@@ -165,7 +174,10 @@ def generate(lane: Lane, messages: list[dict], *, schema: dict | None, num_ctx: 
         payload = {"model": lane.model, "temperature": 0, "max_tokens": num_predict * 2,
                    "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
                    **dict(lane.extra)}
-        if schema:
+        if schema and lane.json_mode == "schema":
+            payload["response_format"] = {"type": "json_schema",
+                                          "json_schema": {"name": "result", "schema": schema}}
+        elif schema:
             payload["response_format"] = {"type": "json_object"}
         data = _post(lane.base_url + "/chat/completions", payload,
                      {"Authorization": f"Bearer {key}"} if key else {}, timeout)

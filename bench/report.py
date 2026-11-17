@@ -26,7 +26,8 @@ TOLERANCE = 0.05  # a lane "holds quality" within 5 points of the best lane on t
 UNAVAILABLE = {
     "deepseek-flash": "API key present but the account has no balance (HTTP 402); not topped up for this run.",
     "codex-luna (gpt-5.6-luna)": "Codex CLI present but the ChatGPT account was over its usage pressure line.",
-    "rtx-3090 qwen3.8:27b": "Remote GPU box was unreachable on the run date.",
+    "official Qwen3.8-27B on the local RTX 3090": "Not installed on the run date. A community "
+    "fine-tune of it was available and is measured; the official weights were measured on Groq.",
 }
 
 
@@ -212,6 +213,21 @@ def markdown(summary: dict) -> str:
             others = ", ".join(f"{lane} {q:.2f}" for lane, q in sorted(c["same_items"].items()))
             out.append(f"\n{c['lane']} is partial ({c['attempted']} of {c['items']} items). On the same items: "
                        f"{c['lane']} {c['quality']:.2f}, {others}.")
+    pair = ("groq-qwen3.8-27b", "rtx3090-qwen3.8-27b-community-ft")
+    if all(lane in summary["lanes"] for lane in pair):
+        out += ["", "## Qwen3.8-27B: official on Groq vs community fine-tune on a local RTX 3090", "",
+                "| Task | Groq quality | Groq p50 s | Groq cost / 1k | RTX 3090 quality | RTX 3090 p50 s | RTX 3090 cost / 1k |",
+                "| --- | --- | --- | --- | --- | --- | --- |"]
+        for task, data in summary["tasks"].items():
+            cells = {c["lane"]: c for c in data["cells"]}
+            if all(lane in cells for lane in pair):
+                g, r = cells[pair[0]], cells[pair[1]]
+                out.append(f"| {task} | {g['quality']:.2f} | {g['p50_seconds']} | {fmt_usd(g['usd_per_1k_items'])} | "
+                           f"{r['quality']:.2f} | {r['p50_seconds']} | {fmt_usd(r['usd_per_1k_items'])} |")
+        out += ["", "These are different weights (official release vs a community fine-tune), so a gap "
+                "mixes the fine-tune's effect with serving differences (Groq's stack vs LM Studio)."]
+    out += ["", "## Lanes", "", "| Lane | Model id | Notes |", "| --- | --- | --- |"]
+    out += [f"| {name} | `{lane['model']}` | {lane['price_note']} |" for name, lane in summary["lanes"].items()]
     agreement = summary["judge_agreement"]
     out += ["", "## Judge agreement", ""]
     if agreement.get("pairs"):

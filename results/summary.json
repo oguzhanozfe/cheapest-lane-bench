@@ -612,6 +612,128 @@
     "quality": 0.875
    }
   ],
+  "commit-message|rtx3090-qwen3.8-27b-community-ft": [
+   {
+    "det": 1.0,
+    "id": "commit-message-01",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-02",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-03",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-04",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-05",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-06",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-07",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-08",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-09",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-10",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-11",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-12",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   }
+  ],
   "diff-review|gemini-3.5-flash-lite": [
    {
     "det": 1.0,
@@ -1334,6 +1456,128 @@
     },
     "ok": true,
     "quality": 0.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-11",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.6667,
+    "id": "diff-review-12",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.6667
+   }
+  ],
+  "diff-review|rtx3090-qwen3.8-27b-community-ft": [
+   {
+    "det": 1.0,
+    "id": "diff-review-01",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-02",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-03",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.6667,
+    "id": "diff-review-04",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.6667
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-05",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-06",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-07",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-08",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-09",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-10",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
    },
    {
     "det": 1.0,
@@ -2120,6 +2364,128 @@
     "quality": 1.0
    }
   ],
+  "extract|rtx3090-qwen3.8-27b-community-ft": [
+   {
+    "det": 1.0,
+    "id": "extract-01",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-02",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-03",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-04",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-05",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-06",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-07",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-08",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-09",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-10",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-11",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-12",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   }
+  ],
   "summarize|gemini-3.5-flash-lite": [
    {
     "det": 0.84,
@@ -2774,6 +3140,128 @@
     "quality": 0.465
    }
   ],
+  "summarize|rtx3090-qwen3.8-27b-community-ft": [
+   {
+    "det": 0.84,
+    "id": "summarize-01",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.795
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-02",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.795
+   },
+   {
+    "det": 0.52,
+    "id": "summarize-03",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.51
+   },
+   {
+    "det": 1.0,
+    "id": "summarize-04",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 0.68,
+    "id": "summarize-05",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.715
+   },
+   {
+    "det": 0.68,
+    "id": "summarize-06",
+    "judges": {
+     "primary": 2,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.465
+   },
+   {
+    "det": 1.0,
+    "id": "summarize-07",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-08",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.795
+   },
+   {
+    "det": 1.0,
+    "id": "summarize-09",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-10",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.795
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-11",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.67
+   },
+   {
+    "det": 0.36,
+    "id": "summarize-12",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.555
+   }
+  ],
   "translate|gemini-3.5-flash-lite": [
    {
     "det": 0.959,
@@ -3395,6 +3883,128 @@
     },
     "ok": true,
     "quality": 0.8281
+   }
+  ],
+  "translate|rtx3090-qwen3.8-27b-community-ft": [
+   {
+    "det": 0.9632,
+    "id": "translate-01",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9816
+   },
+   {
+    "det": 0.9367,
+    "id": "translate-02",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9684
+   },
+   {
+    "det": 0.9279,
+    "id": "translate-03",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9639
+   },
+   {
+    "det": 0.9206,
+    "id": "translate-04",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8353
+   },
+   {
+    "det": 0.9249,
+    "id": "translate-05",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8375
+   },
+   {
+    "det": 0.8508,
+    "id": "translate-06",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8004
+   },
+   {
+    "det": 0.9403,
+    "id": "translate-07",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8452
+   },
+   {
+    "det": 0.9381,
+    "id": "translate-08",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.969
+   },
+   {
+    "det": 0.9445,
+    "id": "translate-09",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9723
+   },
+   {
+    "det": 0.8822,
+    "id": "translate-10",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.6911
+   },
+   {
+    "det": 0.9232,
+    "id": "translate-11",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8366
+   },
+   {
+    "det": 0.9189,
+    "id": "translate-12",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9595
    }
   ],
   "triage-log|gemini-3.5-flash-lite": [
@@ -4160,6 +4770,128 @@
     "ok": true,
     "quality": 0.0
    }
+  ],
+  "triage-log|rtx3090-qwen3.8-27b-community-ft": [
+   {
+    "det": 1.0,
+    "id": "triage-01",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-02",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-03",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-04",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-05",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-06",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-07",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-08",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.0,
+    "id": "triage-09",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-10",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-11",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-12",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   }
   ]
  },
  "judge_agreement": {
@@ -4221,6 +4953,13 @@
    "kind": "ollama",
    "model": "qwen3.5:9b",
    "price_note": "local; electricity only at 40 W x $0.3/kWh (assumed)",
+   "usd_in_per_m": 0.0,
+   "usd_out_per_m": 0.0
+  },
+  "rtx3090-qwen3.8-27b-community-ft": {
+   "kind": "openai",
+   "model": "qwen3.8-27b-uncensored-hauhaucs-aggressive-mtp",
+   "price_note": "community fine-tune of Qwen3.8-27B, local RTX 3090 via LM Studio; electricity only at an assumed 350 W x $0.3/kWh",
    "usd_in_per_m": 0.0,
    "usd_out_per_m": 0.0
   }
@@ -4327,21 +5066,41 @@
      ],
      "task": "commit-message",
      "usd_per_1k_items": 0.6549
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 1.0,
+     "items": 12,
+     "judge_mean": 4.667,
+     "judged": true,
+     "lane": "rtx3090-qwen3.8-27b-community-ft",
+     "mean_output_tokens": 55,
+     "mean_prompt_tokens": 507,
+     "ok": 12,
+     "p50_seconds": 5.85,
+     "quality": 0.9583,
+     "quality_ci95": [
+      0.9271,
+      0.9896
+     ],
+     "task": "commit-message",
+     "usd_per_1k_items": 0.1613
     }
    ],
    "frontier": [
     "qwen3.5-4b-local",
     "qwen3.5-9b-local",
-    "gemini-3.5-flash-lite",
-    "groq-qwen3.8-27b"
+    "groq-qwen3.8-27b",
+    "rtx3090-qwen3.8-27b-community-ft"
    ],
    "recommendation": {
     "bar": 0.9292,
     "best_lane": "groq-qwen3.8-27b",
     "best_quality": 0.9792,
-    "lane": "groq-qwen3.8-27b",
-    "quality": 0.9792,
-    "usd_per_1k_items": 0.6549
+    "lane": "rtx3090-qwen3.8-27b-community-ft",
+    "quality": 0.9583,
+    "usd_per_1k_items": 0.1613
    }
   },
   "diff-review": {
@@ -4449,7 +5208,8 @@
       "groq-qwen3.8-27b": 1.0,
       "nemotron-3.5-lightning-free": 0.0,
       "qwen3.5-4b-local": 0.2667,
-      "qwen3.5-9b-local": 1.0
+      "qwen3.5-9b-local": 1.0,
+      "rtx3090-qwen3.8-27b-community-ft": 1.0
      },
      "task": "diff-review",
      "usd_per_1k_items": 0.6817
@@ -4493,21 +5253,42 @@
      ],
      "task": "diff-review",
      "usd_per_1k_items": 0.8928
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.9444,
+     "items": 12,
+     "judge_mean": null,
+     "judged": true,
+     "lane": "rtx3090-qwen3.8-27b-community-ft",
+     "mean_output_tokens": 95,
+     "mean_prompt_tokens": 606,
+     "ok": 12,
+     "p50_seconds": 4.8,
+     "quality": 0.9444,
+     "quality_ci95": [
+      0.8611,
+      1.0
+     ],
+     "task": "diff-review",
+     "usd_per_1k_items": 0.1454
     }
    ],
    "frontier": [
     "qwen3.5-9b-local",
     "nemotron-3.5-lightning-free",
     "gemini-3.5-flash-lite",
-    "groq-gpt-oss-20b"
+    "groq-gpt-oss-20b",
+    "rtx3090-qwen3.8-27b-community-ft"
    ],
    "recommendation": {
     "bar": 0.9222,
     "best_lane": "gemini-3.5-flash-lite",
     "best_quality": 0.9722,
-    "lane": "gemini-3.5-flash-lite",
-    "quality": 0.9722,
-    "usd_per_1k_items": 0.4051
+    "lane": "rtx3090-qwen3.8-27b-community-ft",
+    "quality": 0.9444,
+    "usd_per_1k_items": 0.1454
    }
   },
   "extract": {
@@ -4615,7 +5396,8 @@
       "groq-qwen3.8-27b": 1.0,
       "nemotron-3.5-lightning-free": 0.6667,
       "qwen3.5-4b-local": 0.8413,
-      "qwen3.5-9b-local": 0.9333
+      "qwen3.5-9b-local": 0.9333,
+      "rtx3090-qwen3.8-27b-community-ft": 1.0
      },
      "task": "extract",
      "usd_per_1k_items": 0.7955
@@ -4659,14 +5441,34 @@
      ],
      "task": "extract",
      "usd_per_1k_items": 0.9111
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 1.0,
+     "items": 12,
+     "judge_mean": null,
+     "judged": true,
+     "lane": "rtx3090-qwen3.8-27b-community-ft",
+     "mean_output_tokens": 157,
+     "mean_prompt_tokens": 356,
+     "ok": 12,
+     "p50_seconds": 5.66,
+     "quality": 1.0,
+     "quality_ci95": [
+      1.0,
+      1.0
+     ],
+     "task": "extract",
+     "usd_per_1k_items": 0.1629
     }
    ],
    "frontier": [
     "qwen3.5-4b-local",
     "qwen3.5-9b-local",
     "nemotron-3.5-lightning-free",
-    "gemini-3.5-flash-lite",
-    "groq-gpt-oss-20b"
+    "groq-gpt-oss-20b",
+    "rtx3090-qwen3.8-27b-community-ft"
    ],
    "recommendation": {
     "bar": 0.95,
@@ -4741,7 +5543,8 @@
       "groq-gpt-oss-20b": 0.675,
       "groq-qwen3.8-27b": 0.755,
       "qwen3.5-4b-local": 0.6925,
-      "qwen3.5-9b-local": 0.63
+      "qwen3.5-9b-local": 0.63,
+      "rtx3090-qwen3.8-27b-community-ft": 0.795
      },
      "task": "summarize",
      "usd_per_1k_items": 0.0
@@ -4788,7 +5591,8 @@
       "groq-gpt-oss-20b": 0.675,
       "groq-qwen3.8-27b": 0.755,
       "qwen3.5-4b-local": 0.6925,
-      "qwen3.5-9b-local": 0.63
+      "qwen3.5-9b-local": 0.63,
+      "rtx3090-qwen3.8-27b-community-ft": 0.795
      },
      "task": "summarize",
      "usd_per_1k_items": 1.2113
@@ -4832,11 +5636,32 @@
      ],
      "task": "summarize",
      "usd_per_1k_items": 1.1755
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.7867,
+     "items": 12,
+     "judge_mean": 3.833,
+     "judged": true,
+     "lane": "rtx3090-qwen3.8-27b-community-ft",
+     "mean_output_tokens": 189,
+     "mean_prompt_tokens": 516,
+     "ok": 12,
+     "p50_seconds": 7.59,
+     "quality": 0.7475,
+     "quality_ci95": [
+      0.6554,
+      0.8396
+     ],
+     "task": "summarize",
+     "usd_per_1k_items": 0.2202
     }
    ],
    "frontier": [
     "qwen3.5-4b-local",
-    "groq-qwen3.8-27b"
+    "groq-qwen3.8-27b",
+    "rtx3090-qwen3.8-27b-community-ft"
    ],
    "recommendation": {
     "bar": 0.725,
@@ -4931,7 +5756,8 @@
       "groq-gpt-oss-20b": 0.9224,
       "groq-qwen3.8-27b": 0.8468,
       "qwen3.5-4b-local": 0.9604,
-      "qwen3.5-9b-local": 0.96
+      "qwen3.5-9b-local": 0.96,
+      "rtx3090-qwen3.8-27b-community-ft": 0.9639
      },
      "task": "translate",
      "usd_per_1k_items": 0.9728
@@ -4975,12 +5801,33 @@
      ],
      "task": "translate",
      "usd_per_1k_items": 1.3174
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.9226,
+     "items": 12,
+     "judge_mean": 4.417,
+     "judged": true,
+     "lane": "rtx3090-qwen3.8-27b-community-ft",
+     "mean_output_tokens": 252,
+     "mean_prompt_tokens": 367,
+     "ok": 12,
+     "p50_seconds": 8.55,
+     "quality": 0.8884,
+     "quality_ci95": [
+      0.8389,
+      0.9366
+     ],
+     "task": "translate",
+     "usd_per_1k_items": 0.2513
     }
    ],
    "frontier": [
     "qwen3.5-4b-local",
     "qwen3.5-9b-local",
-    "gemini-3.5-flash-lite"
+    "gemini-3.5-flash-lite",
+    "rtx3090-qwen3.8-27b-community-ft"
    ],
    "recommendation": {
     "bar": 0.8446,
@@ -5096,7 +5943,8 @@
       "groq-qwen3.8-27b": 1.0,
       "nemotron-3.5-lightning-free": 0.6667,
       "qwen3.5-4b-local": 1.0,
-      "qwen3.5-9b-local": 0.5
+      "qwen3.5-9b-local": 0.5,
+      "rtx3090-qwen3.8-27b-community-ft": 1.0
      },
      "task": "triage-log",
      "usd_per_1k_items": 1.4835
@@ -5140,20 +5988,40 @@
      ],
      "task": "triage-log",
      "usd_per_1k_items": 1.3227
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.9167,
+     "items": 12,
+     "judge_mean": null,
+     "judged": true,
+     "lane": "rtx3090-qwen3.8-27b-community-ft",
+     "mean_output_tokens": 215,
+     "mean_prompt_tokens": 535,
+     "ok": 12,
+     "p50_seconds": 5.97,
+     "quality": 0.9167,
+     "quality_ci95": [
+      0.75,
+      1.0
+     ],
+     "task": "triage-log",
+     "usd_per_1k_items": 0.1743
     }
    ],
    "frontier": [
     "qwen3.5-4b-local",
     "nemotron-3.5-lightning-free",
-    "gemini-3.5-flash-lite"
+    "rtx3090-qwen3.8-27b-community-ft"
    ],
    "recommendation": {
     "bar": 0.8667,
     "best_lane": "gemini-3.5-flash-lite",
     "best_quality": 0.9167,
-    "lane": "gemini-3.5-flash-lite",
+    "lane": "rtx3090-qwen3.8-27b-community-ft",
     "quality": 0.9167,
-    "usd_per_1k_items": 0.6527
+    "usd_per_1k_items": 0.1743
    }
   }
  },
@@ -5161,6 +6029,6 @@
  "unavailable": {
   "codex-luna (gpt-5.6-luna)": "Codex CLI present but the ChatGPT account was over its usage pressure line.",
   "deepseek-flash": "API key present but the account has no balance (HTTP 402); not topped up for this run.",
-  "rtx-3090 qwen3.8:27b": "Remote GPU box was unreachable on the run date."
+  "official Qwen3.8-27B on the local RTX 3090": "Not installed on the run date. A community fine-tune of it was available and is measured; the official weights were measured on Groq."
  }
 }
