@@ -1,6 +1,6 @@
 """Score recorded outputs and write the cost/quality frontier. Needs no model or network.
 
-    python -m bench.report            # writes results/{summary.json,report.md,frontier.svg,frontier.html} and the README block
+    python -m bench.report            # writes results/{summary.json,report.md,frontier.svg}, docs/index.html and the README block
     python -m bench.report --check    # exit 1 if the committed files differ from a fresh rebuild
 """
 from __future__ import annotations
@@ -10,6 +10,7 @@ import html
 import json
 import math
 import random
+import re
 import statistics
 import sys
 
@@ -224,7 +225,7 @@ def markdown(summary: dict) -> str:
     return "\n".join(out) + "\n"
 
 
-COLORS = ["#2a6fdb", "#d9480f", "#2b8a3e", "#ae3ec9", "#e8590c", "#0b7285", "#5c940d"]
+COLORS = ["#2a6fdb", "#e8590c", "#2b8a3e", "#ae3ec9", "#0b7285", "#c2255c", "#5c940d"]
 
 
 def svg(summary: dict) -> str:
@@ -265,13 +266,17 @@ def svg(summary: dict) -> str:
         for c in data["cells"]:
             cx, cy = x_of(c["usd_per_1k_items"]), h - 20 - c["quality"] * (h - 40)
             ring = ' stroke="#000" stroke-width="2"' if c["lane"] == data["recommendation"].get("lane") else ""
+            note = ""
+            if not c["complete"]:  # partial lane: hollow, so a 3-item sample does not read as a full result
+                ring = f' fill-opacity="0" stroke="{color[c["lane"]]}" stroke-width="2"'
+                note = f", partial: {c['attempted']} of {c['items']} items"
             parts.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="5" fill="{color[c["lane"]]}"{ring}>'
                          f'<title>{html.escape(c["lane"])}: quality {c["quality"]:.2f}, '
-                         f'{fmt_usd(c["usd_per_1k_items"])} per 1k</title></circle>')
+                         f'{fmt_usd(c["usd_per_1k_items"])} per 1k{note}</title></circle>')
         parts.append("</g>")
     ly = rows * (h + 40) + 20
     parts.append(f'<text x="20" y="{ly}" fill="#333">x: est. USD per 1,000 items (log; local = electricity, free tiers at paid list price). '
-                 'y: quality 0-1. Black ring: recommended lane. Dashed: frontier.</text>')
+                 'y: quality 0-1. Black ring: recommended. Hollow: partial lane, not ranked. Dashed: frontier.</text>')
     for i, lane in enumerate(lanes):
         lx, lyy = 20 + (i % 3) * 320, ly + 20 + (i // 3) * 20
         parts.append(f'<circle cx="{lx + 5}" cy="{lyy - 4}" r="5" fill="{color[lane]}"/>'
@@ -280,13 +285,61 @@ def svg(summary: dict) -> str:
     return "\n".join(parts) + "\n"
 
 
+def _inline(text: str) -> str:
+    text = html.escape(text)
+    text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
+    return re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
+
+
+def md_to_html(report_md: str) -> str:
+    """Just enough Markdown for report.md: headings, tables, bullets, paragraphs."""
+    out, table, items = [], [], []
+
+    def flush() -> None:
+        if table:
+            head, *rows = [[_inline(c.strip()) for c in r.strip().strip("|").split("|")] for r in table
+                           if not re.fullmatch(r"\|[\s|:-]+\|", r.strip())]
+            out.append("<div class='scroll'><table><thead><tr>" + "".join(f"<th>{c}</th>" for c in head)
+                       + "</tr></thead><tbody>" + "".join("<tr>" + "".join(f"<td>{c}</td>" for c in r) + "</tr>"
+                                                          for r in rows) + "</tbody></table></div>")
+            table.clear()
+        if items:
+            out.append("<ul>" + "".join(f"<li>{i}</li>" for i in items) + "</ul>")
+            items.clear()
+
+    for line in report_md.splitlines():
+        if line.startswith("|"):
+            table.append(line)
+            continue
+        flush()
+        if line.startswith("## "):
+            out.append(f"<h2>{_inline(line[3:])}</h2>")
+        elif line.startswith("- "):
+            items.append(_inline(line[2:]))
+        elif line.strip() and not line.startswith("# "):
+            out.append(f"<p>{_inline(line)}</p>")
+    flush()
+    return "\n".join(out)
+
+
 def page(summary: dict, report_md: str, chart: str) -> str:
-    body = html.escape(report_md)
-    return ("<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width'>"
-            "<title>Cheapest lane frontier</title><style>body{font-family:system-ui,sans-serif;max-width:1000px;"
-            "margin:24px auto;padding:0 16px;background:#fff;color:#111}svg{max-width:100%;height:auto}"
-            "pre{white-space:pre-wrap;font-size:13px}</style></head><body><h1>Cheapest lane that holds quality</h1>"
-            f"{chart}<pre>{body}</pre></body></html>\n")
+    style = (":root{--bg:#fff;--fg:#16181d;--muted:#5b6170;--line:#e3e5ea;--head:#f5f6f8}"
+             "@media (prefers-color-scheme:dark){:root{--bg:#121417;--fg:#e8eaee;--muted:#a0a6b2;"
+             "--line:#2c3038;--head:#1b1e23}.chart{background:#fff;border-radius:8px}}"
+             "body{font-family:system-ui,sans-serif;max-width:1040px;margin:24px auto;padding:0 16px;"
+             "background:var(--bg);color:var(--fg);line-height:1.5}h1{margin-bottom:4px}"
+             ".lede{color:var(--muted);margin-top:0}svg{max-width:100%;height:auto}"
+             ".scroll{overflow-x:auto}table{border-collapse:collapse;font-size:14px;margin:8px 0 16px}"
+             "th,td{border:1px solid var(--line);padding:4px 8px;text-align:left;white-space:nowrap}"
+             "th{background:var(--head)}code{font-size:13px}a{color:#2a6fdb}")
+    return ("<!doctype html><html lang='en'><head><meta charset='utf-8'>"
+            "<meta name='viewport' content='width=device-width, initial-scale=1'>"
+            f"<title>Cheapest lane frontier</title><style>{style}</style></head><body>"
+            "<h1>Cheapest lane that holds quality</h1>"
+            "<p class='lede'>Six bounded LLM chores from llm-offload, scored on hand-built golden sets across "
+            "local and cloud model lanes. Generated offline from the recorded runs in "
+            "<a href='https://github.com/oguzhanozfe/cheapest-lane-bench'>cheapest-lane-bench</a>.</p>"
+            f"<div class='chart'>{chart}</div>{md_to_html(report_md)}</body></html>\n")
 
 
 START, END = "<!-- results:start -->", "<!-- results:end -->"
@@ -311,11 +364,17 @@ def outputs() -> dict[str, str]:
     chart = svg(summary)
     files = {"results/summary.json": json.dumps(summary, indent=1, sort_keys=True, ensure_ascii=False) + "\n",
              "results/report.md": report_md, "results/frontier.svg": chart,
-             "results/frontier.html": page(summary, report_md, chart)}
+             "docs/index.html": page(summary, report_md, chart)}  # GitHub Pages
     readme = readme_with(report_md)
     if readme is not None:
         files["README.md"] = readme
     return files
+
+
+def write(files: dict[str, str]) -> None:
+    for name, text in files.items():
+        (ROOT / name).parent.mkdir(parents=True, exist_ok=True)
+        (ROOT / name).write_text(text, "utf-8")
 
 
 def main() -> None:
@@ -331,8 +390,7 @@ def main() -> None:
             sys.exit(1)
         print("results are reproducible from the recorded outputs")
         return
-    for name, text in files.items():
-        (ROOT / name).write_text(text, "utf-8")
+    write(files)
     print(files["results/report.md"])
 
 
