@@ -13,7 +13,7 @@ import random
 import statistics
 import sys
 
-from .judge import JUDGES, judge_path
+from .judge import JUDGE_MODELS, judge_path
 from .lanes import LANES
 from .run import ROOT, load_golden, load_jsonl, run_path
 from .scoring import ALL_TASKS, TEXT_TASKS, score
@@ -39,7 +39,7 @@ def bootstrap_ci(values: list[float], seed: int = 7, rounds: int = 2000) -> tupl
 
 def item_rows(task: str, lane: str) -> list[dict]:
     runs = {r["id"]: r for r in load_jsonl(run_path(lane, task))}
-    judged = {name: {r["id"]: r.get("score") for r in load_jsonl(judge_path(name, lane, task))} for name in JUDGES}
+    judged = {name: {r["id"]: r.get("score") for r in load_jsonl(judge_path(name, lane, task))} for name in JUDGE_MODELS}
     rows = []
     for item in load_golden(task):
         record = runs.get(item["id"])
@@ -50,7 +50,7 @@ def item_rows(task: str, lane: str) -> list[dict]:
         row = {"id": item["id"], "ok": ok, "det": detail["score"], "detail": detail,
                "seconds": record.get("seconds"), "prompt_tokens": record.get("prompt_tokens", 0),
                "output_tokens": record.get("output_tokens", 0), "cost_usd": record.get("cost_usd", 0.0),
-               "judges": {name: judged[name].get(item["id"]) for name in JUDGES}}
+               "judges": {name: judged[name].get(item["id"]) for name in JUDGE_MODELS}}
         quality = row["det"]
         if task in TEXT_TASKS:
             primary = row["judges"]["primary"]
@@ -141,12 +141,27 @@ def build() -> dict:
     lanes = [name for name in LANES if any((ROOT / "results" / "runs" / name).glob("*.jsonl"))]
     all_rows = {(t, l): item_rows(t, l) for t in ALL_TASKS for l in lanes}
     for t in TEXT_TASKS:
-        same_basis([all_rows[(t, l)] for l in lanes])
+        total = len(load_golden(t))
+        complete = [all_rows[(t, l)] for l in lanes if len(all_rows[(t, l)]) == total]
+        partial = [all_rows[(t, l)] for l in lanes if 0 < len(all_rows[(t, l)]) < total]
+        same_basis(complete)
+        for rows in partial:  # unranked lanes are only graded deterministically
+            for r in rows:
+                r["quality"] = r["det"] if r["ok"] else 0.0
+                r["judge_missing"] = True
     tasks_out = {}
     for task in ALL_TASKS:
         total = len(load_golden(task))
         cells = [aggregate(task, lane, all_rows[(task, lane)], total) for lane in lanes
                  if all_rows[(task, lane)]]
+        for cell in cells:
+            if cell["complete"]:
+                continue
+            ids = {r["id"] for r in all_rows[(task, cell["lane"])]}
+            same = {c["lane"]: round(statistics.fmean([r["quality"] for r in all_rows[(task, c["lane"])]
+                                                       if r["id"] in ids]), 4)
+                    for c in cells if c["complete"] and ids}
+            cell["same_items"] = same  # ranked lanes' quality on exactly the items this lane attempted
         tasks_out[task] = {"cells": cells, "frontier": frontier([c for c in cells if c["ok"] and c["complete"]]),
                            "recommendation": recommend(cells)}
     return {
@@ -155,7 +170,7 @@ def build() -> dict:
                          "usd_in_per_m": LANES[name].usd_in_per_m, "usd_out_per_m": LANES[name].usd_out_per_m,
                          "price_note": LANES[name].price_note} for name in lanes},
         "unavailable": UNAVAILABLE,
-        "judges": {name: lane.model for name, lane in JUDGES.items()},
+        "judges": dict(JUDGE_MODELS),
         "judge_agreement": judge_agreement(all_rows),
         "tasks": tasks_out,
         "items": {f"{t}|{l}": [{k: r[k] for k in ("id", "ok", "det", "quality", "judges")} for r in rows]
@@ -185,11 +200,17 @@ def markdown(summary: dict) -> str:
             lo, hi = c["quality_ci95"]
             judge = "" if c["judge_mean"] is None else f"{c['judge_mean']:.2f}"
             if task in TEXT_TASKS and not c["judged"]:
-                judge = (judge + " " if judge else "") + "(pending; quality = deterministic only)"
+                judge = "not graded (partial lane)" if not c["complete"] else \
+                    (judge + " " if judge else "") + "(incomplete; quality = deterministic only)"
             out.append(f"| {c['lane']} | {c['attempted']}/{c['items']} ({c['ok']} ok){'' if c['complete'] else ' partial'} | {c['quality']:.2f} ({lo:.2f}-{hi:.2f}) | "
                        f"{c['deterministic']:.2f} | {judge} | {c['p50_seconds'] if c['p50_seconds'] is not None else '-'} | "
                        f"{c['mean_prompt_tokens']}/{c['mean_output_tokens']} | {fmt_usd(c['usd_per_1k_items'])} | "
                        f"{'yes' if c['lane'] in data['frontier'] else ''} |")
+        notes = [c for c in data["cells"] if not c["complete"] and c.get("same_items")]
+        for c in notes:
+            others = ", ".join(f"{lane} {q:.2f}" for lane, q in sorted(c["same_items"].items()))
+            out.append(f"\n{c['lane']} is partial ({c['attempted']} of {c['items']} items). On the same items: "
+                       f"{c['lane']} {c['quality']:.2f}, {others}.")
     agreement = summary["judge_agreement"]
     out += ["", "## Judge agreement", ""]
     if agreement.get("pairs"):

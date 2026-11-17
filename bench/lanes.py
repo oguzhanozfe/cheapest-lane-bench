@@ -75,6 +75,8 @@ def _post(url: str, payload: dict, headers: dict, timeout: float) -> dict:
                 return json.loads(response.read().decode("utf-8"))
         except urllib.error.HTTPError as error:
             body = error.read()[:300].decode("utf-8", "replace")
+            if error.code == 429 and "quota" in body.lower():
+                raise LaneError(f"HTTP 429 quota: {body}") from error  # daily quota: retrying cannot help
             if error.code in (429, 500, 502, 503, 504) and attempt < 3:
                 time.sleep(delay)
                 delay = min(delay * 2, 120)

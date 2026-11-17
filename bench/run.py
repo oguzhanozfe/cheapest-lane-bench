@@ -22,6 +22,9 @@ GOLDEN = ROOT / "golden"
 RUNS = ROOT / "results" / "runs"
 _write_lock = threading.Lock()
 NUM_CTX = 8192
+# Lane errors that mean the model itself failed the item (scored 0). Everything else is
+# treated as a capacity failure and the item stays unattempted.
+MODEL_FAILURES = ("output budget", "empty answer", "empty message")
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -54,9 +57,14 @@ def run_one(lane: Lane, task_name: str, item: dict, attempts: int, timeout: floa
             return {**record, "status": "ok", **out, "cost_usd": round(cost, 8)}
         except LaneError as error:
             message = str(error)
-            # Output-budget exhaustion is a model result, not contention: do not retry it.
-            if "output budget" in message or attempt == attempts - 1:
+            if any(marker in message for marker in MODEL_FAILURES):
+                # The model answered but the answer is unusable: that is a quality result.
                 return {**record, "status": "error", "error": message[:300], "content": None}
+            if attempt == attempts - 1:
+                # Timeouts, 429/503, dropped connections: capacity, not quality. Leave the
+                # item unattempted so it is neither scored nor counted.
+                print(f"{lane.name:30} {task_name:15} {item['id']:20} skip  {message[:80]}", flush=True)
+                return None
             time.sleep(15 * (attempt + 1))  # shared Ollama / rate limits: back off and retry
     raise AssertionError("unreachable")
 
@@ -69,6 +77,8 @@ def run_lane(lane: Lane, task_names: list[str], limit: int | None, attempts: int
             if item["id"] in done:
                 continue
             result = run_one(lane, task_name, item, attempts, timeout)
+            if result is None:
+                continue
             with _write_lock:
                 path.parent.mkdir(parents=True, exist_ok=True)
                 kept = [r for r in load_jsonl(path) if r["id"] != item["id"]]

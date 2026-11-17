@@ -5,17 +5,17 @@
     "det": 1.0,
     "id": "commit-message-01",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": 5
     },
     "ok": true,
-    "quality": 1.0
+    "quality": 0.875
    },
    {
     "det": 1.0,
     "id": "commit-message-02",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": 5
     },
     "ok": true,
@@ -25,27 +25,27 @@
     "det": 1.0,
     "id": "commit-message-03",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 1.0
+    "quality": 0.875
    },
    {
     "det": 1.0,
     "id": "commit-message-04",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 1.0
+    "quality": 0.875
    },
    {
     "det": 1.0,
     "id": "commit-message-05",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": null
     },
     "ok": true,
@@ -55,17 +55,17 @@
     "det": 1.0,
     "id": "commit-message-06",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 1.0
+    "quality": 0.875
    },
    {
     "det": 1.0,
     "id": "commit-message-07",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": null
     },
     "ok": true,
@@ -75,17 +75,17 @@
     "det": 1.0,
     "id": "commit-message-08",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 1.0
+    "quality": 0.875
    },
    {
     "det": 1.0,
     "id": "commit-message-09",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": null
     },
     "ok": true,
@@ -95,27 +95,27 @@
     "det": 1.0,
     "id": "commit-message-10",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 1.0
+    "quality": 0.875
    },
    {
     "det": 0.8333,
     "id": "commit-message-11",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 0.8333
+    "quality": 0.7916
    },
    {
     "det": 1.0,
     "id": "commit-message-12",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": null
     },
     "ok": true,
@@ -124,22 +124,144 @@
   ],
   "commit-message|gemini-3.8-flash": [],
   "commit-message|nemotron-3.5-lightning-free": [],
-  "commit-message|qwen3.5-9b-local": [
+  "commit-message|qwen3.5-4b-local": [
    {
-    "det": 1.0,
+    "det": 0.6667,
     "id": "commit-message-01",
     "judges": {
-     "primary": null,
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.7084
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-02",
+    "judges": {
+     "primary": 5,
      "second": null
     },
     "ok": true,
     "quality": 1.0
    },
    {
+    "det": 0.6667,
+    "id": "commit-message-03",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.7084
+   },
+   {
+    "det": 0.6667,
+    "id": "commit-message-04",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.5834
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-05",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 0.6667,
+    "id": "commit-message-06",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.7084
+   },
+   {
+    "det": 0.6667,
+    "id": "commit-message-07",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.5834
+   },
+   {
+    "det": 0.3333,
+    "id": "commit-message-08",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.4166
+   },
+   {
+    "det": 0.3333,
+    "id": "commit-message-09",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.4166
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-10",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.3333,
+    "id": "commit-message-11",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.4166
+   },
+   {
+    "det": 1.0,
+    "id": "commit-message-12",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   }
+  ],
+  "commit-message|qwen3.5-9b-local": [
+   {
+    "det": 1.0,
+    "id": "commit-message-01",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
     "det": 1.0,
     "id": "commit-message-02",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": null
     },
     "ok": true,
@@ -149,7 +271,7 @@
     "det": 1.0,
     "id": "commit-message-03",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": null
     },
     "ok": true,
@@ -159,27 +281,27 @@
     "det": 1.0,
     "id": "commit-message-04",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 1.0
+    "quality": 0.875
    },
    {
     "det": 0.6667,
     "id": "commit-message-05",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 0.6667
+    "quality": 0.7084
    },
    {
     "det": 1.0,
     "id": "commit-message-06",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": null
     },
     "ok": true,
@@ -189,7 +311,7 @@
     "det": 1.0,
     "id": "commit-message-07",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": null
     },
     "ok": true,
@@ -199,27 +321,27 @@
     "det": 1.0,
     "id": "commit-message-08",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 1.0
+    "quality": 0.875
    },
    {
     "det": 0.3333,
     "id": "commit-message-09",
     "judges": {
-     "primary": null,
+     "primary": 3,
      "second": null
     },
     "ok": true,
-    "quality": 0.3333
+    "quality": 0.4166
    },
    {
     "det": 1.0,
     "id": "commit-message-10",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": null
     },
     "ok": true,
@@ -229,21 +351,21 @@
     "det": 1.0,
     "id": "commit-message-11",
     "judges": {
-     "primary": null,
+     "primary": 3,
      "second": null
     },
     "ok": true,
-    "quality": 1.0
+    "quality": 0.75
    },
    {
     "det": 1.0,
     "id": "commit-message-12",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 1.0
+    "quality": 0.875
    }
   ],
   "diff-review|gemini-3.5-flash-lite": [
@@ -368,7 +490,18 @@
     "quality": 1.0
    }
   ],
-  "diff-review|gemini-3.8-flash": [],
+  "diff-review|gemini-3.8-flash": [
+   {
+    "det": 1.0,
+    "id": "diff-review-02",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   }
+  ],
   "diff-review|nemotron-3.5-lightning-free": [
    {
     "det": 1.0,
@@ -479,6 +612,128 @@
     },
     "ok": true,
     "quality": 0.6667
+   },
+   {
+    "det": 0.6667,
+    "id": "diff-review-12",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.6667
+   }
+  ],
+  "diff-review|qwen3.5-4b-local": [
+   {
+    "det": 1.0,
+    "id": "diff-review-01",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.2667,
+    "id": "diff-review-02",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.2667
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-03",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.4,
+    "id": "diff-review-04",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.4
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-05",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-06",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.0,
+    "id": "diff-review-07",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.0
+   },
+   {
+    "det": 0.0,
+    "id": "diff-review-08",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.0
+   },
+   {
+    "det": 0.0,
+    "id": "diff-review-09",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.0
+   },
+   {
+    "det": 0.0,
+    "id": "diff-review-10",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.0
+   },
+   {
+    "det": 1.0,
+    "id": "diff-review-11",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
    },
    {
     "det": 0.6667,
@@ -757,14 +1012,14 @@
     "quality": 1.0
    },
    {
-    "det": 0.0,
+    "det": 1.0,
     "id": "extract-03",
     "judges": {
      "primary": null,
      "second": null
     },
-    "ok": false,
-    "quality": 0.0
+    "ok": true,
+    "quality": 1.0
    }
   ],
   "extract|nemotron-3.5-lightning-free": [
@@ -877,6 +1132,128 @@
     },
     "ok": true,
     "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-12",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   }
+  ],
+  "extract|qwen3.5-4b-local": [
+   {
+    "det": 0.6667,
+    "id": "extract-01",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.6667
+   },
+   {
+    "det": 0.8571,
+    "id": "extract-02",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8571
+   },
+   {
+    "det": 1.0,
+    "id": "extract-03",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-04",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-05",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.8571,
+    "id": "extract-06",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8571
+   },
+   {
+    "det": 1.0,
+    "id": "extract-07",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "extract-08",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.4,
+    "id": "extract-09",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.4
+   },
+   {
+    "det": 1.0,
+    "id": "extract-10",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.8571,
+    "id": "extract-11",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8571
    },
    {
     "det": 1.0,
@@ -1016,124 +1393,145 @@
     "det": 0.84,
     "id": "summarize-01",
     "judges": {
-     "primary": null,
+     "primary": 3,
      "second": 5
     },
     "ok": true,
-    "quality": 0.84
+    "quality": 0.67
+   },
+   {
+    "det": 0.68,
+    "id": "summarize-02",
+    "judges": {
+     "primary": 3,
+     "second": 5
+    },
+    "ok": true,
+    "quality": 0.59
+   },
+   {
+    "det": 0.52,
+    "id": "summarize-03",
+    "judges": {
+     "primary": 4,
+     "second": 5
+    },
+    "ok": true,
+    "quality": 0.635
+   },
+   {
+    "det": 1.0,
+    "id": "summarize-04",
+    "judges": {
+     "primary": 4,
+     "second": 5
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 1.0,
+    "id": "summarize-05",
+    "judges": {
+     "primary": 4,
+     "second": 5
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-06",
+    "judges": {
+     "primary": 3,
+     "second": 4
+    },
+    "ok": true,
+    "quality": 0.67
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-07",
+    "judges": {
+     "primary": 3,
+     "second": 4
+    },
+    "ok": true,
+    "quality": 0.67
+   },
+   {
+    "det": 1.0,
+    "id": "summarize-08",
+    "judges": {
+     "primary": 3,
+     "second": 5
+    },
+    "ok": true,
+    "quality": 0.75
+   },
+   {
+    "det": 1.0,
+    "id": "summarize-09",
+    "judges": {
+     "primary": 4,
+     "second": 5
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 0.68,
+    "id": "summarize-10",
+    "judges": {
+     "primary": 3,
+     "second": 5
+    },
+    "ok": true,
+    "quality": 0.59
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-11",
+    "judges": {
+     "primary": 3,
+     "second": 4
+    },
+    "ok": true,
+    "quality": 0.67
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-12",
+    "judges": {
+     "primary": 4,
+     "second": 5
+    },
+    "ok": true,
+    "quality": 0.795
+   }
+  ],
+  "summarize|gemini-3.8-flash": [
+   {
+    "det": 0.68,
+    "id": "summarize-01",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.68
    },
    {
     "det": 0.68,
     "id": "summarize-02",
     "judges": {
      "primary": null,
-     "second": 5
+     "second": null
     },
     "ok": true,
     "quality": 0.68
-   },
-   {
-    "det": 0.52,
-    "id": "summarize-03",
-    "judges": {
-     "primary": null,
-     "second": 5
-    },
-    "ok": true,
-    "quality": 0.52
-   },
-   {
-    "det": 1.0,
-    "id": "summarize-04",
-    "judges": {
-     "primary": null,
-     "second": 5
-    },
-    "ok": true,
-    "quality": 1.0
-   },
-   {
-    "det": 1.0,
-    "id": "summarize-05",
-    "judges": {
-     "primary": null,
-     "second": 5
-    },
-    "ok": true,
-    "quality": 1.0
-   },
-   {
-    "det": 0.84,
-    "id": "summarize-06",
-    "judges": {
-     "primary": null,
-     "second": 4
-    },
-    "ok": true,
-    "quality": 0.84
-   },
-   {
-    "det": 0.84,
-    "id": "summarize-07",
-    "judges": {
-     "primary": null,
-     "second": 4
-    },
-    "ok": true,
-    "quality": 0.84
-   },
-   {
-    "det": 1.0,
-    "id": "summarize-08",
-    "judges": {
-     "primary": null,
-     "second": 5
-    },
-    "ok": true,
-    "quality": 1.0
-   },
-   {
-    "det": 1.0,
-    "id": "summarize-09",
-    "judges": {
-     "primary": null,
-     "second": 5
-    },
-    "ok": true,
-    "quality": 1.0
-   },
-   {
-    "det": 0.68,
-    "id": "summarize-10",
-    "judges": {
-     "primary": null,
-     "second": 5
-    },
-    "ok": true,
-    "quality": 0.68
-   },
-   {
-    "det": 0.84,
-    "id": "summarize-11",
-    "judges": {
-     "primary": null,
-     "second": 4
-    },
-    "ok": true,
-    "quality": 0.84
-   },
-   {
-    "det": 0.84,
-    "id": "summarize-12",
-    "judges": {
-     "primary": null,
-     "second": 5
-    },
-    "ok": true,
-    "quality": 0.84
    }
   ],
-  "summarize|gemini-3.8-flash": [],
   "summarize|nemotron-3.5-lightning-free": [
    {
     "det": 0.84,
@@ -1154,16 +1552,128 @@
     },
     "ok": true,
     "quality": 0.52
-   },
+   }
+  ],
+  "summarize|qwen3.5-4b-local": [
    {
-    "det": 0.0,
-    "id": "summarize-03",
+    "det": 0.84,
+    "id": "summarize-01",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
-    "ok": false,
-    "quality": 0.0
+    "ok": true,
+    "quality": 0.795
+   },
+   {
+    "det": 0.68,
+    "id": "summarize-02",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.59
+   },
+   {
+    "det": 0.52,
+    "id": "summarize-03",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.635
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-04",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.795
+   },
+   {
+    "det": 0.52,
+    "id": "summarize-05",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.51
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-06",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.795
+   },
+   {
+    "det": 1.0,
+    "id": "summarize-07",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.75
+   },
+   {
+    "det": 1.0,
+    "id": "summarize-08",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.875
+   },
+   {
+    "det": 0.8,
+    "id": "summarize-09",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.65
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-10",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.795
+   },
+   {
+    "det": 0.84,
+    "id": "summarize-11",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.795
+   },
+   {
+    "det": 0.68,
+    "id": "summarize-12",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.715
    }
   ],
   "summarize|qwen3.5-9b-local": [
@@ -1171,121 +1681,121 @@
     "det": 0.68,
     "id": "summarize-01",
     "judges": {
-     "primary": null,
-     "second": null
+     "primary": 4,
+     "second": 5
     },
     "ok": true,
-    "quality": 0.68
+    "quality": 0.715
    },
    {
     "det": 0.84,
     "id": "summarize-02",
     "judges": {
-     "primary": null,
-     "second": null
+     "primary": 2,
+     "second": 4
     },
     "ok": true,
-    "quality": 0.84
+    "quality": 0.545
    },
    {
     "det": 0.52,
     "id": "summarize-03",
     "judges": {
-     "primary": null,
-     "second": null
+     "primary": 4,
+     "second": 5
     },
     "ok": true,
-    "quality": 0.52
+    "quality": 0.635
    },
    {
     "det": 1.0,
     "id": "summarize-04",
     "judges": {
-     "primary": null,
-     "second": null
+     "primary": 3,
+     "second": 5
     },
     "ok": true,
-    "quality": 1.0
+    "quality": 0.75
    },
    {
     "det": 0.68,
     "id": "summarize-05",
     "judges": {
-     "primary": null,
-     "second": null
+     "primary": 3,
+     "second": 5
     },
     "ok": true,
-    "quality": 0.68
+    "quality": 0.59
    },
    {
     "det": 1.0,
     "id": "summarize-06",
     "judges": {
-     "primary": null,
-     "second": null
+     "primary": 4,
+     "second": 5
     },
     "ok": true,
-    "quality": 1.0
+    "quality": 0.875
    },
    {
     "det": 1.0,
     "id": "summarize-07",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 1.0
+    "quality": 0.875
    },
    {
     "det": 0.84,
     "id": "summarize-08",
     "judges": {
-     "primary": null,
+     "primary": 3,
      "second": null
     },
     "ok": true,
-    "quality": 0.84
+    "quality": 0.67
    },
    {
     "det": 0.84,
     "id": "summarize-09",
     "judges": {
-     "primary": null,
+     "primary": 3,
      "second": null
     },
     "ok": true,
-    "quality": 0.84
+    "quality": 0.67
    },
    {
     "det": 0.84,
     "id": "summarize-10",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 0.84
+    "quality": 0.795
    },
    {
     "det": 0.84,
     "id": "summarize-11",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 0.84
+    "quality": 0.795
    },
    {
     "det": 0.68,
     "id": "summarize-12",
     "judges": {
-     "primary": null,
+     "primary": 2,
      "second": null
     },
     "ok": true,
-    "quality": 0.68
+    "quality": 0.465
    }
   ],
   "translate|gemini-3.5-flash-lite": [
@@ -1293,205 +1803,378 @@
     "det": 0.959,
     "id": "translate-01",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": null
     },
     "ok": true,
-    "quality": 0.959
+    "quality": 0.9795
    },
    {
     "det": 0.9417,
     "id": "translate-02",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": null
     },
     "ok": true,
-    "quality": 0.9417
+    "quality": 0.9708
    },
    {
     "det": 0.9427,
     "id": "translate-03",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 0.9427
+    "quality": 0.8463
    },
    {
     "det": 0.9511,
     "id": "translate-04",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": null
     },
     "ok": true,
-    "quality": 0.9511
+    "quality": 0.9755
    },
    {
     "det": 0.9489,
     "id": "translate-05",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 0.9489
+    "quality": 0.8495
    },
    {
     "det": 0.8668,
     "id": "translate-06",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 0.8668
+    "quality": 0.8084
    },
    {
     "det": 0.9348,
     "id": "translate-07",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": null
     },
     "ok": true,
-    "quality": 0.9348
+    "quality": 0.9674
    },
    {
     "det": 0.9393,
     "id": "translate-08",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 0.9393
+    "quality": 0.8447
    },
    {
     "det": 0.9607,
     "id": "translate-09",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 0.9607
+    "quality": 0.8554
    },
    {
     "det": 0.9007,
     "id": "translate-10",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 0.9007
+    "quality": 0.8254
    },
    {
     "det": 0.9239,
     "id": "translate-11",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": null
     },
     "ok": true,
-    "quality": 0.9239
+    "quality": 0.962
    },
    {
     "det": 0.9497,
     "id": "translate-12",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 0.9497
+    "quality": 0.8498
    }
   ],
-  "translate|gemini-3.8-flash": [],
-  "translate|nemotron-3.5-lightning-free": [],
-  "translate|qwen3.5-9b-local": [
+  "translate|gemini-3.8-flash": [
    {
-    "det": 0.9684,
-    "id": "translate-01",
-    "judges": {
-     "primary": null,
-     "second": null
-    },
-    "ok": true,
-    "quality": 0.9684
-   },
-   {
-    "det": 0.931,
-    "id": "translate-02",
-    "judges": {
-     "primary": null,
-     "second": null
-    },
-    "ok": true,
-    "quality": 0.931
-   },
-   {
-    "det": 0.9199,
+    "det": 0.9323,
     "id": "translate-03",
     "judges": {
      "primary": null,
      "second": null
     },
     "ok": true,
-    "quality": 0.9199
+    "quality": 0.9323
+   }
+  ],
+  "translate|nemotron-3.5-lightning-free": [],
+  "translate|qwen3.5-4b-local": [
+   {
+    "det": 0.9687,
+    "id": "translate-01",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9844
+   },
+   {
+    "det": 0.9137,
+    "id": "translate-02",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8318
+   },
+   {
+    "det": 0.9208,
+    "id": "translate-03",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9604
+   },
+   {
+    "det": 0.9028,
+    "id": "translate-04",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8264
+   },
+   {
+    "det": 0.8343,
+    "id": "translate-05",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.6672
+   },
+   {
+    "det": 0.8243,
+    "id": "translate-06",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.7872
+   },
+   {
+    "det": 0.899,
+    "id": "translate-07",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9495
+   },
+   {
+    "det": 0.904,
+    "id": "translate-08",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.827
+   },
+   {
+    "det": 0.9013,
+    "id": "translate-09",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.7006
+   },
+   {
+    "det": 0.7468,
+    "id": "translate-10",
+    "judges": {
+     "primary": 2,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.4984
+   },
+   {
+    "det": 0.8927,
+    "id": "translate-11",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.6964
+   },
+   {
+    "det": 0.8705,
+    "id": "translate-12",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8103
+   }
+  ],
+  "translate|qwen3.5-9b-local": [
+   {
+    "det": 0.9684,
+    "id": "translate-01",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9842
+   },
+   {
+    "det": 0.931,
+    "id": "translate-02",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.9655
+   },
+   {
+    "det": 0.9199,
+    "id": "translate-03",
+    "judges": {
+     "primary": 5,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.96
    },
    {
     "det": 0.9045,
     "id": "translate-04",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 0.9045
+    "quality": 0.8273
    },
    {
     "det": 0.8095,
     "id": "translate-05",
     "judges": {
-     "primary": null,
+     "primary": 3,
      "second": null
     },
     "ok": true,
-    "quality": 0.8095
+    "quality": 0.6547
    },
    {
     "det": 0.8314,
     "id": "translate-06",
     "judges": {
-     "primary": null,
+     "primary": 4,
      "second": null
     },
     "ok": true,
-    "quality": 0.8314
+    "quality": 0.7907
    },
    {
     "det": 0.9113,
     "id": "translate-07",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": null
     },
     "ok": true,
-    "quality": 0.9113
+    "quality": 0.9556
    },
    {
     "det": 0.9151,
     "id": "translate-08",
     "judges": {
-     "primary": null,
+     "primary": 5,
      "second": null
     },
     "ok": true,
-    "quality": 0.9151
+    "quality": 0.9576
+   },
+   {
+    "det": 0.9111,
+    "id": "translate-09",
+    "judges": {
+     "primary": 3,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.7056
+   },
+   {
+    "det": 0.8636,
+    "id": "translate-10",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8068
+   },
+   {
+    "det": 0.8928,
+    "id": "translate-11",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8214
+   },
+   {
+    "det": 0.9062,
+    "id": "translate-12",
+    "judges": {
+     "primary": 4,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.8281
    }
   ],
   "triage-log|gemini-3.5-flash-lite": [
@@ -1616,7 +2299,38 @@
     "quality": 1.0
    }
   ],
-  "triage-log|gemini-3.8-flash": [],
+  "triage-log|gemini-3.8-flash": [
+   {
+    "det": 1.0,
+    "id": "triage-01",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-02",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-03",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   }
+  ],
   "triage-log|nemotron-3.5-lightning-free": [
    {
     "det": 1.0,
@@ -1717,6 +2431,128 @@
     },
     "ok": true,
     "quality": 0.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-11",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-12",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   }
+  ],
+  "triage-log|qwen3.5-4b-local": [
+   {
+    "det": 1.0,
+    "id": "triage-01",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-02",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-03",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-04",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-05",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-06",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.0,
+    "id": "triage-07",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-08",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
+   },
+   {
+    "det": 0.0,
+    "id": "triage-09",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 0.0
+   },
+   {
+    "det": 1.0,
+    "id": "triage-10",
+    "judges": {
+     "primary": null,
+     "second": null
+    },
+    "ok": true,
+    "quality": 1.0
    },
    {
     "det": 1.0,
@@ -1863,10 +2699,15 @@
   ]
  },
  "judge_agreement": {
-  "pairs": 0
+  "exact": 0.05,
+  "mean_primary": 3.5,
+  "mean_second": 4.8,
+  "pairs": 20,
+  "pearson": 0.559,
+  "within_1": 0.65
  },
  "judges": {
-  "primary": "gemma-4-31b-it",
+  "primary": "claude-sonnet-5-5 (Claude Code subagent, rubric prompts from --dump)",
   "second": "gemini-3-flash-preview"
  },
  "lanes": {
@@ -1891,6 +2732,13 @@
    "usd_in_per_m": 0.0,
    "usd_out_per_m": 0.0
   },
+  "qwen3.5-4b-local": {
+   "kind": "ollama",
+   "model": "qwen3.5:4b",
+   "price_note": "local; electricity only at 40 W x $0.3/kWh (assumed)",
+   "usd_in_per_m": 0.0,
+   "usd_out_per_m": 0.0
+  },
   "qwen3.5-9b-local": {
    "kind": "ollama",
    "model": "qwen3.5:9b",
@@ -1905,19 +2753,39 @@
     {
      "attempted": 12,
      "complete": true,
+     "deterministic": 0.6944,
+     "items": 12,
+     "judge_mean": 3.833,
+     "judged": true,
+     "lane": "qwen3.5-4b-local",
+     "mean_output_tokens": 54,
+     "mean_prompt_tokens": 507,
+     "ok": 12,
+     "p50_seconds": 1.16,
+     "quality": 0.7014,
+     "quality_ci95": [
+      0.5903,
+      0.823
+     ],
+     "task": "commit-message",
+     "usd_per_1k_items": 0.0037
+    },
+    {
+     "attempted": 12,
+     "complete": true,
      "deterministic": 0.9167,
      "items": 12,
-     "judge_mean": null,
-     "judged": false,
+     "judge_mean": 4.25,
+     "judged": true,
      "lane": "qwen3.5-9b-local",
      "mean_output_tokens": 62,
      "mean_prompt_tokens": 507,
      "ok": 12,
      "p50_seconds": 6.99,
-     "quality": 0.9167,
+     "quality": 0.8646,
      "quality_ci95": [
-      0.8056,
-      1.0
+      0.7673,
+      0.9479
      ],
      "task": "commit-message",
      "usd_per_1k_items": 0.0237
@@ -1927,37 +2795,58 @@
      "complete": true,
      "deterministic": 0.9861,
      "items": 12,
-     "judge_mean": null,
-     "judged": false,
+     "judge_mean": 4.417,
+     "judged": true,
      "lane": "gemini-3.5-flash-lite",
      "mean_output_tokens": 58,
      "mean_prompt_tokens": 527,
      "ok": 12,
      "p50_seconds": 1.19,
-     "quality": 0.9861,
+     "quality": 0.9201,
      "quality_ci95": [
-      0.9583,
-      1.0
+      0.8819,
+      0.9583
      ],
      "task": "commit-message",
      "usd_per_1k_items": 0.303
     }
    ],
    "frontier": [
+    "qwen3.5-4b-local",
     "qwen3.5-9b-local",
     "gemini-3.5-flash-lite"
    ],
    "recommendation": {
-    "bar": 0.9361,
+    "bar": 0.8701,
     "best_lane": "gemini-3.5-flash-lite",
-    "best_quality": 0.9861,
+    "best_quality": 0.9201,
     "lane": "gemini-3.5-flash-lite",
-    "quality": 0.9861,
+    "quality": 0.9201,
     "usd_per_1k_items": 0.303
    }
   },
   "diff-review": {
    "cells": [
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.5278,
+     "items": 12,
+     "judge_mean": null,
+     "judged": true,
+     "lane": "qwen3.5-4b-local",
+     "mean_output_tokens": 211,
+     "mean_prompt_tokens": 465,
+     "ok": 12,
+     "p50_seconds": 2.61,
+     "quality": 0.5278,
+     "quality_ci95": [
+      0.2889,
+      0.7778
+     ],
+     "task": "diff-review",
+     "usd_per_1k_items": 0.0111
+    },
     {
      "attempted": 12,
      "complete": true,
@@ -2017,6 +2906,32 @@
      ],
      "task": "diff-review",
      "usd_per_1k_items": 0.4051
+    },
+    {
+     "attempted": 1,
+     "complete": false,
+     "deterministic": 1.0,
+     "items": 12,
+     "judge_mean": null,
+     "judged": true,
+     "lane": "gemini-3.8-flash",
+     "mean_output_tokens": 68,
+     "mean_prompt_tokens": 569,
+     "ok": 1,
+     "p50_seconds": 5.59,
+     "quality": 1.0,
+     "quality_ci95": [
+      1.0,
+      1.0
+     ],
+     "same_items": {
+      "gemini-3.5-flash-lite": 1.0,
+      "nemotron-3.5-lightning-free": 0.0,
+      "qwen3.5-4b-local": 0.2667,
+      "qwen3.5-9b-local": 1.0
+     },
+     "task": "diff-review",
+     "usd_per_1k_items": 0.6817
     }
    ],
    "frontier": [
@@ -2035,6 +2950,26 @@
   },
   "extract": {
    "cells": [
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.8865,
+     "items": 12,
+     "judge_mean": null,
+     "judged": true,
+     "lane": "qwen3.5-4b-local",
+     "mean_output_tokens": 101,
+     "mean_prompt_tokens": 307,
+     "ok": 12,
+     "p50_seconds": 1.66,
+     "quality": 0.8865,
+     "quality_ci95": [
+      0.7825,
+      0.9762
+     ],
+     "task": "extract",
+     "usd_per_1k_items": 0.0062
+    },
     {
      "attempted": 12,
      "complete": true,
@@ -2098,25 +3033,32 @@
     {
      "attempted": 3,
      "complete": false,
-     "deterministic": 0.6667,
+     "deterministic": 1.0,
      "items": 12,
      "judge_mean": null,
      "judged": true,
      "lane": "gemini-3.8-flash",
-     "mean_output_tokens": 100,
-     "mean_prompt_tokens": 358,
-     "ok": 2,
-     "p50_seconds": 212.06,
-     "quality": 0.6667,
+     "mean_output_tokens": 142,
+     "mean_prompt_tokens": 351,
+     "ok": 3,
+     "p50_seconds": 103.16,
+     "quality": 1.0,
      "quality_ci95": [
-      0.0,
+      1.0,
       1.0
      ],
+     "same_items": {
+      "gemini-3.5-flash-lite": 1.0,
+      "nemotron-3.5-lightning-free": 0.6667,
+      "qwen3.5-4b-local": 0.8413,
+      "qwen3.5-9b-local": 0.9333
+     },
      "task": "extract",
-     "usd_per_1k_items": 0.6454
+     "usd_per_1k_items": 0.7955
     }
    ],
    "frontier": [
+    "qwen3.5-4b-local",
     "qwen3.5-9b-local",
     "nemotron-3.5-lightning-free",
     "gemini-3.5-flash-lite"
@@ -2135,27 +3077,47 @@
     {
      "attempted": 12,
      "complete": true,
+     "deterministic": 0.7833,
+     "items": 12,
+     "judge_mean": 3.667,
+     "judged": true,
+     "lane": "qwen3.5-4b-local",
+     "mean_output_tokens": 192,
+     "mean_prompt_tokens": 516,
+     "ok": 12,
+     "p50_seconds": 3.36,
+     "quality": 0.725,
+     "quality_ci95": [
+      0.6663,
+      0.7792
+     ],
+     "task": "summarize",
+     "usd_per_1k_items": 0.0107
+    },
+    {
+     "attempted": 12,
+     "complete": true,
      "deterministic": 0.8133,
      "items": 12,
-     "judge_mean": null,
-     "judged": false,
+     "judge_mean": 3.333,
+     "judged": true,
      "lane": "qwen3.5-9b-local",
      "mean_output_tokens": 184,
      "mean_prompt_tokens": 516,
      "ok": 12,
      "p50_seconds": 11.54,
-     "quality": 0.8133,
+     "quality": 0.6983,
      "quality_ci95": [
-      0.7333,
-      0.8933
+      0.6292,
+      0.7629
      ],
      "task": "summarize",
      "usd_per_1k_items": 0.0391
     },
     {
-     "attempted": 3,
+     "attempted": 2,
      "complete": false,
-     "deterministic": 0.4533,
+     "deterministic": 0.68,
      "items": 12,
      "judge_mean": null,
      "judged": false,
@@ -2164,11 +3126,16 @@
      "mean_prompt_tokens": 1668,
      "ok": 2,
      "p50_seconds": 8.47,
-     "quality": 0.4533,
+     "quality": 0.68,
      "quality_ci95": [
-      0.0,
+      0.52,
       0.84
      ],
+     "same_items": {
+      "gemini-3.5-flash-lite": 0.63,
+      "qwen3.5-4b-local": 0.6925,
+      "qwen3.5-9b-local": 0.63
+     },
      "task": "summarize",
      "usd_per_1k_items": 0.0
     },
@@ -2177,92 +3144,183 @@
      "complete": true,
      "deterministic": 0.84,
      "items": 12,
-     "judge_mean": null,
-     "judged": false,
+     "judge_mean": 3.417,
+     "judged": true,
      "lane": "gemini-3.5-flash-lite",
      "mean_output_tokens": 160,
      "mean_prompt_tokens": 498,
      "ok": 12,
      "p50_seconds": 1.88,
-     "quality": 0.84,
+     "quality": 0.7221,
      "quality_ci95": [
-      0.76,
-      0.92
+      0.6642,
+      0.7858
      ],
      "task": "summarize",
      "usd_per_1k_items": 0.5492
+    },
+    {
+     "attempted": 2,
+     "complete": false,
+     "deterministic": 0.68,
+     "items": 12,
+     "judge_mean": null,
+     "judged": false,
+     "lane": "gemini-3.8-flash",
+     "mean_output_tokens": 218,
+     "mean_prompt_tokens": 525,
+     "ok": 2,
+     "p50_seconds": 23.77,
+     "quality": 0.68,
+     "quality_ci95": [
+      0.68,
+      0.68
+     ],
+     "same_items": {
+      "gemini-3.5-flash-lite": 0.63,
+      "qwen3.5-4b-local": 0.6925,
+      "qwen3.5-9b-local": 0.63
+     },
+     "task": "summarize",
+     "usd_per_1k_items": 1.2113
     }
    ],
    "frontier": [
-    "qwen3.5-9b-local",
-    "gemini-3.5-flash-lite"
+    "qwen3.5-4b-local"
    ],
    "recommendation": {
-    "bar": 0.79,
-    "best_lane": "gemini-3.5-flash-lite",
-    "best_quality": 0.84,
-    "lane": "qwen3.5-9b-local",
-    "quality": 0.8133,
-    "usd_per_1k_items": 0.0391
+    "bar": 0.675,
+    "best_lane": "qwen3.5-4b-local",
+    "best_quality": 0.725,
+    "lane": "qwen3.5-4b-local",
+    "quality": 0.725,
+    "usd_per_1k_items": 0.0107
    }
   },
   "translate": {
    "cells": [
     {
-     "attempted": 8,
-     "complete": false,
-     "deterministic": 0.8989,
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.8816,
      "items": 12,
-     "judge_mean": null,
-     "judged": false,
-     "lane": "qwen3.5-9b-local",
-     "mean_output_tokens": 235,
-     "mean_prompt_tokens": 384,
-     "ok": 8,
-     "p50_seconds": 11.56,
-     "quality": 0.8989,
+     "judge_mean": 3.833,
+     "judged": true,
+     "lane": "qwen3.5-4b-local",
+     "mean_output_tokens": 255,
+     "mean_prompt_tokens": 367,
+     "ok": 12,
+     "p50_seconds": 3.94,
+     "quality": 0.795,
      "quality_ci95": [
-      0.8642,
-      0.9309
+      0.7131,
+      0.8666
      ],
      "task": "translate",
-     "usd_per_1k_items": 0.0408
+     "usd_per_1k_items": 0.0131
+    },
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.8971,
+     "items": 12,
+     "judge_mean": 4.25,
+     "judged": true,
+     "lane": "qwen3.5-9b-local",
+     "mean_output_tokens": 253,
+     "mean_prompt_tokens": 367,
+     "ok": 12,
+     "p50_seconds": 14.54,
+     "quality": 0.8548,
+     "quality_ci95": [
+      0.7908,
+      0.912
+     ],
+     "task": "translate",
+     "usd_per_1k_items": 0.0487
     },
     {
      "attempted": 12,
      "complete": true,
      "deterministic": 0.9349,
      "items": 12,
-     "judge_mean": null,
-     "judged": false,
+     "judge_mean": 4.417,
+     "judged": true,
      "lane": "gemini-3.5-flash-lite",
      "mean_output_tokens": 252,
      "mean_prompt_tokens": 351,
      "ok": 12,
      "p50_seconds": 3.85,
-     "quality": 0.9349,
+     "quality": 0.8946,
      "quality_ci95": [
-      0.9202,
-      0.9481
+      0.8587,
+      0.9319
      ],
      "task": "translate",
      "usd_per_1k_items": 0.7346
+    },
+    {
+     "attempted": 1,
+     "complete": false,
+     "deterministic": 0.9323,
+     "items": 12,
+     "judge_mean": null,
+     "judged": false,
+     "lane": "gemini-3.8-flash",
+     "mean_output_tokens": 193,
+     "mean_prompt_tokens": 332,
+     "ok": 1,
+     "p50_seconds": 10.8,
+     "quality": 0.9323,
+     "quality_ci95": [
+      0.9323,
+      0.9323
+     ],
+     "same_items": {
+      "gemini-3.5-flash-lite": 0.8463,
+      "qwen3.5-4b-local": 0.9604,
+      "qwen3.5-9b-local": 0.96
+     },
+     "task": "translate",
+     "usd_per_1k_items": 0.9728
     }
    ],
    "frontier": [
+    "qwen3.5-4b-local",
+    "qwen3.5-9b-local",
     "gemini-3.5-flash-lite"
    ],
    "recommendation": {
-    "bar": 0.8849,
+    "bar": 0.8446,
     "best_lane": "gemini-3.5-flash-lite",
-    "best_quality": 0.9349,
-    "lane": "gemini-3.5-flash-lite",
-    "quality": 0.9349,
-    "usd_per_1k_items": 0.7346
+    "best_quality": 0.8946,
+    "lane": "qwen3.5-9b-local",
+    "quality": 0.8548,
+    "usd_per_1k_items": 0.0487
    }
   },
   "triage-log": {
    "cells": [
+    {
+     "attempted": 12,
+     "complete": true,
+     "deterministic": 0.8333,
+     "items": 12,
+     "judge_mean": null,
+     "judged": true,
+     "lane": "qwen3.5-4b-local",
+     "mean_output_tokens": 224,
+     "mean_prompt_tokens": 412,
+     "ok": 12,
+     "p50_seconds": 3.12,
+     "quality": 0.8333,
+     "quality_ci95": [
+      0.5833,
+      1.0
+     ],
+     "task": "triage-log",
+     "usd_per_1k_items": 0.0114
+    },
     {
      "attempted": 12,
      "complete": true,
@@ -2322,10 +3380,36 @@
      ],
      "task": "triage-log",
      "usd_per_1k_items": 0.6527
+    },
+    {
+     "attempted": 3,
+     "complete": false,
+     "deterministic": 1.0,
+     "items": 12,
+     "judge_mean": null,
+     "judged": true,
+     "lane": "gemini-3.8-flash",
+     "mean_output_tokens": 290,
+     "mean_prompt_tokens": 528,
+     "ok": 3,
+     "p50_seconds": 10.84,
+     "quality": 1.0,
+     "quality_ci95": [
+      1.0,
+      1.0
+     ],
+     "same_items": {
+      "gemini-3.5-flash-lite": 1.0,
+      "nemotron-3.5-lightning-free": 0.6667,
+      "qwen3.5-4b-local": 1.0,
+      "qwen3.5-9b-local": 0.5
+     },
+     "task": "triage-log",
+     "usd_per_1k_items": 1.4835
     }
    ],
    "frontier": [
-    "qwen3.5-9b-local",
+    "qwen3.5-4b-local",
     "nemotron-3.5-lightning-free",
     "gemini-3.5-flash-lite"
    ],

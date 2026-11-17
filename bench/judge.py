@@ -4,7 +4,8 @@ Each recorded output is graded 1-5 against the hand-written reference by a prima
 judge; a second judge from a different vendor grades the same items so report.py can
 state how often the two agree. Resumable like run.py.
 
-    python -m bench.judge --judges primary,second
+    python -m bench.judge --judges second              # Gemini spot-check judge
+    python -m bench.judge --dump prompts.jsonl         # prompts for the primary (Claude) judge
 """
 from __future__ import annotations
 
@@ -21,12 +22,13 @@ from .scoring import TEXT_TASKS
 
 JUDGE_DIR = ROOT / "results" / "judge"
 
+# primary: Claude Sonnet, applied through a Claude Code subagent to the exact prompts
+# `--dump` writes (no Anthropic API key on the run machine, so bench.judge cannot call it).
+# second: gemini-3-flash-preview through bench.judge, on the sample its free quota allowed.
+# Neither is a benchmarked lane.
+JUDGE_MODELS = {"primary": "claude-sonnet-5-5 (Claude Code subagent, rubric prompts from --dump)",
+                "second": "gemini-3-flash-preview"}
 JUDGES: dict[str, Lane] = {
-    # Neither judge is one of the benchmarked lanes. Both are Google models (the only
-    # judges with free quota on the run date), so shared-vendor bias is not ruled out.
-    # Primary grades every free-text output; Gemma has the larger free daily quota.
-    # The second judge only spot-checks a fixed sample (Gemini Flash quota is ~20/day).
-    "primary": Lane("judge-primary", "gemini-openai", "gemma-4-31b-it"),
     "second": Lane("judge-second", "gemini", "gemini-3-flash-preview", thinking="low"),
 }
 
@@ -99,7 +101,11 @@ def run_judge(judge_name: str, lanes: list[str] | None, limit: int | None) -> No
                     out = generate(judge, messages, schema=None, num_ctx=0, num_predict=1024, timeout=300)
                     result.update(score=parse_score(out["content"]), raw=out["content"].strip()[:400])
                 except LaneError as error:
-                    result.update(score=None, error=str(error)[:200])
+                    if "quota" in str(error):
+                        print(f"{judge_name}: daily quota reached, stopping", flush=True)
+                        return
+                    print(f"{judge_name:8} {lane:30} {record['id']:20} skip {str(error)[:60]}", flush=True)
+                    continue  # capacity failure: leave ungraded rather than record a non-grade
                 kept = [r for r in load_jsonl(path) if r["id"] != record["id"]] + [result]
                 kept.sort(key=lambda r: r["id"])
                 path.parent.mkdir(parents=True, exist_ok=True)
@@ -108,13 +114,35 @@ def run_judge(judge_name: str, lanes: list[str] | None, limit: int | None) -> No
                 time.sleep(1)
 
 
+def dump(path: Path, lanes: list[str] | None) -> None:
+    """Write every judge prompt for recorded outputs as JSONL, for an out-of-band judge."""
+    rows = []
+    for task_name in TEXT_TASKS:
+        golden = {item["id"]: item for item in load_golden(task_name)}
+        for run_file in sorted((ROOT / "results" / "runs").glob(f"*/{task_name}.jsonl")):
+            lane = run_file.parent.name
+            if lanes and lane not in lanes:
+                continue
+            for record in load_jsonl(run_file):
+                if record.get("status") == "ok":
+                    messages = judge_messages(task_name, golden[record["id"]], record["content"])
+                    rows.append({"lane": lane, "task": task_name, "id": record["id"],
+                                 "system": messages[0]["content"], "prompt": messages[1]["content"]})
+    path.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows), "utf-8")
+    print(f"{len(rows)} prompts -> {path}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--judges", default="primary,second")
+    parser.add_argument("--dump", type=Path, help="write judge prompts as JSONL instead of calling a judge")
+    parser.add_argument("--judges", default="second")
     parser.add_argument("--lanes")
     parser.add_argument("--limit", type=int)
     args = parser.parse_args()
     lanes = args.lanes.split(",") if args.lanes else None
+    if args.dump:
+        dump(args.dump, lanes)
+        return
     for name in args.judges.split(","):
         run_judge(name, lanes, args.limit)
 
